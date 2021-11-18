@@ -1,9 +1,8 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Container} from 'react-native';
 import {MaterialCommunityIcons} from '@expo/vector-icons'
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-export default function HomeScreen ({navigation}) {
+export default function HomeScreen ({ navigation }) {
     return(
     <View style={{flex:1,
         flexDirection:'column',
@@ -11,7 +10,7 @@ export default function HomeScreen ({navigation}) {
         justifyContent:'center',}}>
         <TouchableOpacity 
             style={styles.button} 
-            onPress={()=>navigation.navigate('CourseSelectionScreen')}>
+            onPress={()=>navigation.navigate("courseSelection")}>
             <Text style={styles.text}>Courses   </Text>
             <MaterialCommunityIcons
                 name="book-open"
@@ -24,7 +23,7 @@ export default function HomeScreen ({navigation}) {
 
         <TouchableOpacity 
             style={styles.button} 
-            onPress={()=>navigation.navigate('CourseSelectionScreen')}>
+            onPress={()=>navigation.navigate("settings" )}>
             <Text style={styles.text}>Settings   </Text>
             <MaterialCommunityIcons
                 name="cog"

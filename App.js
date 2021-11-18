@@ -1,10 +1,9 @@
 import * as React from 'react';
-import {Text, View, Button, StyleSheet, TouchableOpacity} from 'react-native';
+import {Text, View, Button, StyleSheet, TouchableOpacity, BackHandler} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import {MaterialCommunityIcons} from '@expo/vector-icons'
-
 import SplashScreen from './Sceens/splashScreen';
 import HomeScreen  from './Sceens/homeScreen';
 import SettingsScreen  from './Sceens/settingsScreen';
