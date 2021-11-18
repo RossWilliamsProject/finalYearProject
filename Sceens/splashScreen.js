@@ -44,46 +44,46 @@ export default function SplashScreen ({navigation}) {
 
     const styles = StyleSheet.create({
         container: {
-        flex: 1,
-        backgroundColor: '#CDCDCD'
+            flex: 1,
+            backgroundColor: '#CDCDCD'
         },
         header: {
-        flex: 2,
-        justifyContent: 'center',
-        alignItems: 'center'
+            flex: 2,
+            justifyContent: 'center',
+            alignItems: 'center'
         },
         footer: {
-        flex: 1,
-        backgroundColor: 'white',
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
-        paddingVertical: 30,
-        paddingHorizontal: 30
+            flex: 1,
+            backgroundColor: 'white',
+            borderTopLeftRadius: 30,
+            borderTopRightRadius: 30,
+            paddingVertical: 30,
+            paddingHorizontal: 30
         },
         logo: {
-        width: height_logo,
-        height: height_logo
+            width: height_logo,
+            height: height_logo
         },
         title: {
-        color: 'black',
-        fontSize: 30,
-        fontWeight: 'bold'
+            color: 'black',
+            fontSize: 30,
+            fontWeight: 'bold'
         },
         button: {
-        alignItems: 'flex-end',
-        marginTop: 30
+            alignItems: 'flex-end',
+            marginTop: 30
         },
         signIn: {
-        backgroundColor: '#73d583',
-        width: 150,
-        height: 40,
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: 50,
-        flexDirection: 'row'
+            backgroundColor: '#73d583',
+            width: 150,
+            height: 40,
+            justifyContent: 'center',
+            alignItems: 'center',
+            borderRadius: 50,
+            flexDirection: 'row'
         },
         textSign: {
-        color: '#333333',
-        fontWeight: 'bold'
+            color: '#333333',
+            fontWeight: 'bold'
         }
     });

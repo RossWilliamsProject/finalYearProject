@@ -32,6 +32,10 @@ function MyTabs(){
         name="home" 
         component={HomeScreen}
         options={{
+          title: "CompleteEdu",
+          headerStyle:{backgroundColor:"#333333"},
+          headerTintColor:"white",
+          headerTitleStyle:{ fontWeight:"bold", color:"#c2c2c2"},
           tabBarLabel: '',
           tabBarIcon: ({color, size}) =>
             <MaterialCommunityIcons name="home" color={color} size={size} />

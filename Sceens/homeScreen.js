@@ -1,33 +1,57 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Container} from 'react-native';
 import {MaterialCommunityIcons} from '@expo/vector-icons'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 export default function HomeScreen ({navigation}) {
     return(
-    <View>
-    
-      <Text>Home Screen</Text>
-        <TouchableOpacity /*onPress={onPress}*/ style={styles.appButtonContainer}>
-          <Text style={styles.appButtonText}>Courses
-          <MaterialCommunityIcons name="book-open" color={'black'} size={30}/></Text>
+    <View style={{flex:1,
+        flexDirection:'column',
+        alignItems:'center',
+        justifyContent:'center',}}>
+        <TouchableOpacity 
+            style={styles.button} 
+            onPress={()=>navigation.navigate('CourseSelectionScreen')}>
+            <Text style={styles.text}>Courses   </Text>
+            <MaterialCommunityIcons
+                name="book-open"
+                color="black"
+                size={20}
+            />
         </TouchableOpacity>
-      </View>
+
+        <View style={styles.space} />
+
+        <TouchableOpacity 
+            style={styles.button} 
+            onPress={()=>navigation.navigate('CourseSelectionScreen')}>
+            <Text style={styles.text}>Settings   </Text>
+            <MaterialCommunityIcons
+                name="cog"
+                color="black"
+                size={20}
+            />
+        </TouchableOpacity>
+    </View>
     )
 }
 
   const styles = StyleSheet.create({
-    appButtonContainer: {
-      elevation: 8,
-      backgroundColor: "#009688",
-      borderRadius: 10,
-      paddingVertical: 10,
-      paddingHorizontal: 12
+    button: {
+        backgroundColor: '#73d583',
+        width: 150,
+        height: 40,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 50,
+        flexDirection: 'row',
     },
-    appButtonText: {
-      fontSize: 18,
-      color: "#fff",
-      fontWeight: "bold",
-      alignSelf: "center",
-      textTransform: "uppercase"
+    text: {
+        color: '#333333',
+        fontWeight: 'bold'
+    },
+    space: {
+        width: 20,
+        height: 10,
     }
   });
