@@ -7,7 +7,7 @@ import SplashScreen from './Sceens/splashScreen';
 import HomeScreen  from './Sceens/homeScreen';
 import SettingsScreen  from './Sceens/settingsScreen';
 import SubjectSelectionScreenSE  from './Sceens/subjectSelectionScreens/subjectSelectionScreenSE';
-import SubjectSelectionOther  from './Sceens/subjectSelectionScreens/SubjectSelectionOther';
+import SubjectSelectionOther  from './Sceens/subjectSelectionScreens/subjectSelectionOther';
 import CourseSelectionScreen from './Sceens/courseSelectionScreen';
 import SEIntroduction from './Sceens/subjectScreens/SEIntroduction';
 import SERequirements from './Sceens/subjectScreens/SERequiremts';

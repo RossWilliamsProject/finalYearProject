@@ -7,6 +7,8 @@ export default function SubjectSelectionOther ({navigation}) {
     <View style={styles.view}>
         <ScrollView>
         <View style={styles.view}>
+        <View style={styles.space} />
+
         <Text>Course Not Yet Implemented</Text>
         <View style={styles.space} />
 
@@ -106,7 +108,7 @@ export default function SubjectSelectionOther ({navigation}) {
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
-        
+
         <View style={styles.space} />
 
         <TouchableOpacity 
