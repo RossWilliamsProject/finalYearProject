@@ -56,6 +56,7 @@ function MyTabs(){
           headerStyle:{backgroundColor:"#189AB4"},
           headerTitleStyle:{ fontWeight:"bold", color:"black"},
           tabBarLabel: '',
+          borderBottomWidth:0,
           tabBarIcon: ({color, size}) =>
             <MaterialCommunityIcons name="home" color={color} size={size} 
               style={{textAlignVertical: 'center'}}/>

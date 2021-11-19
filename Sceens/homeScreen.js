@@ -1,11 +1,10 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Container} from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Container, ImageBackground} from 'react-native';
 import {MaterialCommunityIcons} from '@expo/vector-icons'
 
 export default function HomeScreen ({ navigation }) {
     return(
-    <View style={styles.view}>
-
+    <ImageBackground source={{uri: 'https://pbs.twimg.com/media/FElwa2vWUAMHeg6?format=jpg&name=medium'}} style={styles.view}>
         <TouchableOpacity 
             style={styles.button} 
             onPress={()=>navigation.navigate("courseSelection")}>
@@ -27,8 +26,7 @@ export default function HomeScreen ({ navigation }) {
             <Text>   </Text>
             <MaterialCommunityIcons name="cog" color="black" size={20}/>
         </TouchableOpacity>
-
-    </View>
+    </ImageBackground>
     )
 }
 
@@ -56,5 +54,5 @@ const styles = StyleSheet.create({
         alignItems:'center',
         justifyContent:'center',
         backgroundColor: "#D9E3E5"
-    }
+    },
 });

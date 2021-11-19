@@ -9,7 +9,7 @@ export default function SplashScreen ({navigation}) {
     <View style={styles.container}>
         
         <View style={styles.header}>
-            {/*add this <Image/> */}
+            <Image source={require('../assets/waves.png')}/>
         </View>
 
         <Animatable.View style={styles.footer} animation="fadeInUpBig">
