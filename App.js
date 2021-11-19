@@ -16,45 +16,54 @@ const Stack = createNativeStackNavigator();
 
 function MyTabs(){
   return (
-    <Tab.Navigator initialRouteName="home">
+    
+    <Tab.Navigator 
+      initialRouteName="home"
+      tabBarOptions = {{
+        activeBackgroundColor: "#189AB4",
+        inactiveBackgroundColor: "#05445E",
+        activeTintColor: "black",
+        inactiveTintColor: "white"
+      }}
+    >
       
       <Tab.Screen 
         name="settings" 
         component={SettingsScreen}
         options={{
-          title: "CompleteEdu",
-          headerStyle:{backgroundColor:"#333333"},
-          headerTintColor:"white",
-          headerTitleStyle:{ fontWeight:"bold", color:"#c2c2c2"},
+          title: "CompleteEducation",
+          headerStyle:{backgroundColor:"#189AB4"},
+          headerTitleStyle:{fontWeight:"bold", color:'black'},
           tabBarLabel: '',
           tabBarIcon: ({color, size}) =>
-            <MaterialCommunityIcons name="cog-outline" color={color} size={size} />
+            <MaterialCommunityIcons name="cog-outline" color={color} size={size}
+              style={{textAlignVertical: 'center'}}/>
         }}/>
 
       <Tab.Screen 
         name="home" 
         component={HomeScreen}
         options={{
-          title: "CompleteEdu",
-          headerStyle:{backgroundColor:"#333333"},
-          headerTintColor:"white",
-          headerTitleStyle:{ fontWeight:"bold", color:"#c2c2c2"},
+          title: "CompleteEducation",
+          headerStyle:{backgroundColor:"#189AB4"},
+          headerTitleStyle:{ fontWeight:"bold", color:"black"},
           tabBarLabel: '',
           tabBarIcon: ({color, size}) =>
-            <MaterialCommunityIcons name="home" color={color} size={size} />
+            <MaterialCommunityIcons name="home" color={color} size={size} 
+              style={{textAlignVertical: 'center'}}/>
         }}/>
 
       <Tab.Screen 
         name="courseSelection" 
         component={CourseSelectionScreen}
         options={{
-          title: "CompleteEdu",
-          headerStyle:{backgroundColor:"#333333"},
-          headerTintColor:"white",
-          headerTitleStyle:{ fontWeight:"bold", color:"#c2c2c2"}, 
+          title: "CompleteEducation",
+          headerStyle:{backgroundColor:"#189AB4"},
+          headerTitleStyle:{ fontWeight:"bold", color:"black"}, 
           tabBarLabel: '',
           tabBarIcon: ({color, size}) =>
-            <MaterialCommunityIcons name="book-open" color={color} size={size}/>
+            <MaterialCommunityIcons name="book-open" color={color} size={size}
+              style={{textAlignVertical: 'center'}}/>
         }}/>
     </Tab.Navigator>
   );
@@ -68,22 +77,21 @@ export default function App() {
         screenOptions={{
           headerShown: false
       }}>
+
         <Stack.Screen options={{
             headerShown: false,
-            title: "CompleteEdu",
-            headerStyle:{backgroundColor:"#333333"},
-            headerTintColor:"white",
-            headerTitleStyle:{ fontWeight:"bold", coor:"#c2c2c2"}
           }}
           name="splashScreen"
           component= {SplashScreen}
         />
+
         <Stack.Screen 
           name="HomeTabs" 
           component={MyTabs}  
           screenOptions={{
             headerShown: false
           }} />
+
         <Stack.Screen name="SubjectSelection" component={SubjectSelectionScreen} />
         <Stack.Screen name="SubjectScreen " component={SubjectScreen} />
 
@@ -91,5 +99,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-

@@ -4,40 +4,37 @@ import {MaterialCommunityIcons} from '@expo/vector-icons'
 
 export default function HomeScreen ({ navigation }) {
     return(
-    <View style={{flex:1,
-        flexDirection:'column',
-        alignItems:'center',
-        justifyContent:'center',}}>
+    <View style={styles.view}>
+
         <TouchableOpacity 
             style={styles.button} 
             onPress={()=>navigation.navigate("courseSelection")}>
-            <Text style={styles.text}>Courses   </Text>
-            <MaterialCommunityIcons
-                name="book-open"
-                color="black"
-                size={20}
-            />
+            <Text style={styles.text}>
+                Courses   
+            </Text>
+            <Text>   </Text>
+            <MaterialCommunityIcons name="book-open" color="black" size={20}/>
         </TouchableOpacity>
 
         <View style={styles.space} />
 
         <TouchableOpacity 
             style={styles.button} 
-            onPress={()=>navigation.navigate("settings" )}>
-            <Text style={styles.text}>Settings   </Text>
-            <MaterialCommunityIcons
-                name="cog"
-                color="black"
-                size={20}
-            />
+            onPress={()=>navigation.navigate("settings")}>
+            <Text style={styles.text}>
+                Settings   
+            </Text>
+            <Text>   </Text>
+            <MaterialCommunityIcons name="cog" color="black" size={20}/>
         </TouchableOpacity>
+
     </View>
     )
 }
 
-  const styles = StyleSheet.create({
+const styles = StyleSheet.create({
     button: {
-        backgroundColor: '#73d583',
+        backgroundColor: 'white',
         width: 150,
         height: 40,
         justifyContent: 'center',
@@ -46,11 +43,17 @@ export default function HomeScreen ({ navigation }) {
         flexDirection: 'row',
     },
     text: {
-        color: '#333333',
+        color: 'black',
         fontWeight: 'bold'
     },
     space: {
         width: 20,
         height: 10,
+    },
+    view: { flex:1,
+        flexDirection:'column',
+        alignItems:'center',
+        justifyContent:'center',
+        backgroundColor: "#D9E3E5"
     }
-  });
+});

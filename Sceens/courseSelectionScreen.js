@@ -1,11 +1,17 @@
 import React from 'react';
-import { View, Text} from 'react-native';
+import { View, Text, StyleSheet} from 'react-native';
 
 export default function CourseSelectionScreen ({navigation}) {
     return(
-    <View>
-      <Text>course selection Screen</Text>
+    <View style={styles.view}>
+      <Text>Course Selection Screen</Text>
     </View>
     )
   }
   
+const styles = StyleSheet.create({
+    view: { flex:1,
+        alignItems:'center',
+        backgroundColor: "#D9E3E5"
+    }
+})
