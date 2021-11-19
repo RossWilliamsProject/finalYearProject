@@ -19,12 +19,18 @@ function MyTabs(){
     
     <Tab.Navigator 
       initialRouteName="home"
-      tabBarOptions = {{
-        activeBackgroundColor: "#189AB4",
-        inactiveBackgroundColor: "#05445E",
-        activeTintColor: "black",
-        inactiveTintColor: "white"
-      }}
+      screenOptions = {{
+          "tabBarActiveTintColor": "black",
+          "tabBarInactiveTintColor": "white",
+          "tabBarActiveBackgroundColor": "#189AB4",
+          "tabBarInactiveBackgroundColor": "#05445E",
+          "tabBarStyle": [
+            {
+              "display": "flex"
+            },
+            null
+          ]
+        }}
     >
       
       <Tab.Screen 
@@ -92,7 +98,10 @@ export default function App() {
             headerShown: false
           }} />
 
-        <Stack.Screen name="SubjectSelection" component={SubjectSelectionScreen} />
+        <Stack.Screen name="SubjectSelection" component={SubjectSelectionScreen} 
+        options={{
+            headerShown: true,
+          }} />
         <Stack.Screen name="SubjectScreen " component={SubjectScreen} />
 
       </Stack.Navigator>
