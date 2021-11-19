@@ -11,10 +11,9 @@ export default function CourseSelectionScreen ({navigation}) {
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate('SubjectSelection', {
-                paramCourseChosen: "Course One"})}>
+                onPress={()=>navigation.navigate('SubjectSelectionSE')}>
                 <Text style={styles.text}>
-                    CourseOne   
+                    Software Engineering 
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>

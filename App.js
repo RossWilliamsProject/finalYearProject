@@ -7,7 +7,7 @@ import {MaterialCommunityIcons} from '@expo/vector-icons'
 import SplashScreen from './Sceens/splashScreen';
 import HomeScreen  from './Sceens/homeScreen';
 import SettingsScreen  from './Sceens/settingsScreen';
-import SubjectSelectionScreen  from './Sceens/subjectSelectionScreen';
+import SubjectSelectionScreenSE  from './Sceens/subjectSelectionScreenSE';
 import SubjectScreen from './Sceens/subjectScreen';
 import CourseSelectionScreen from './Sceens/courseSelectionScreen';
 
@@ -98,11 +98,15 @@ export default function App() {
             headerShown: false
           }} />
 
-        <Stack.Screen name="SubjectSelection" component={SubjectSelectionScreen} 
+        <Stack.Screen name="SubjectSelectionSE" component={SubjectSelectionScreenSE} 
         options={{
             headerShown: true,
+            title: "Software Engineering",
+            headerStyle:{backgroundColor:"#189AB4"},
+            headerTitleStyle:{ fontWeight:"bold", color:"black"}, 
+            tabBarLabel: '',
           }} />
-        <Stack.Screen name="SubjectScreen " component={SubjectScreen} />
+        <Stack.Screen name="SubjectScreen" component={SubjectScreen} />
 
       </Stack.Navigator>
     </NavigationContainer>
