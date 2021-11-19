@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {Text, View, Button, StyleSheet, TouchableOpacity, BackHandler} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
@@ -79,12 +78,10 @@ function MyTabs(){
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator 
-        initialRouteName="" 
-        screenOptions={{
+      <Stack.Navigator initialRouteName="" 
+      screenOptions={{
           headerShown: false
       }}>
-
         <Stack.Screen options={{
             headerShown: false,
           }}
@@ -99,21 +96,26 @@ export default function App() {
             headerShown: false
           }} />
 
+
+
+        {/*LIST OF COURSES*/}
         <Stack.Screen name="SubjectSelectionSE" component={SubjectSelectionScreenSE} 
           options={{
               headerShown: true,
               title: "Software Engineering",
               headerStyle:{backgroundColor:"#189AB4"},
               headerTitleStyle:{ fontWeight:"bold", color:"black"}, 
-              tabBarLabel: '',
           }} />
+
+
+
+        {/*LIST OF SOFTWARE ENGINEERING SUBJECTS*/}
         <Stack.Screen name="SEIntroduction" component={SEIntroduction} 
           options={{
             headerShown: true,
             title: "Introduction",
             headerStyle:{backgroundColor:"#189AB4"},
             headerTitleStyle:{ fontWeight:"bold", color:"black"}, 
-            tabBarLabel: '',
           }}/>
         <Stack.Screen name="SERequirements" component={SERequirements} 
           options={{
@@ -121,7 +123,6 @@ export default function App() {
             title: "Requirements",
             headerStyle:{backgroundColor:"#189AB4"},
             headerTitleStyle:{ fontWeight:"bold", color:"black"}, 
-            tabBarLabel: '',
         }} />
 
       </Stack.Navigator>
