@@ -7,7 +7,7 @@ export default function SubjectSelectionScreen ({navigation}) {
     <View style={styles.view}>
         <ScrollView>
         <View style={styles.view}>
-        <Text>Course Selection Screen</Text>
+        <Text style={styles.text}>Press To Learn!</Text>
         <View style={styles.space} />
 
         <TouchableOpacity 

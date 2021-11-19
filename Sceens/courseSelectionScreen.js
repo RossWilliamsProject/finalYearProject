@@ -5,7 +5,7 @@ export default function CourseSelectionScreen ({navigation}) {
     return(
     <ScrollView>
     <View style={styles.view}>
-        <Text>Course Selection Screen</Text>
+        <Text style={styles.text}>Select Course</Text>
 
         <View style={styles.space} />
 
