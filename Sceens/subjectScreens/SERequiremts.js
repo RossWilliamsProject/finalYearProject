@@ -2,11 +2,11 @@
 import React from 'react';
 import { View, Text} from 'react-native';
 
-export default function SubjectScreen ({navigation}) {
+export default function SERequirements () {
     return(
     <View style={{
         backgroundColor: "#D9E3E5"}}>
-      <Text>subject Screen</Text>
+      <Text>Requirements</Text>
     </View>
     )
   }

@@ -2,7 +2,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Button, ScrollView, TouchableOpacity} from 'react-native';
 
-const SubjectSelectionScreen = ({route}) => {
+export default function SubjectSelectionScreen ({navigation}) {
     return(
     
     <View style={styles.view}>
@@ -13,7 +13,7 @@ const SubjectSelectionScreen = ({route}) => {
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate("subjectScreen")}>
+                onPress={()=>navigation.navigate("SEIntroduction")}>
                 <Text style={styles.text}>
                     Introduction   
                 </Text>
@@ -24,7 +24,7 @@ const SubjectSelectionScreen = ({route}) => {
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate("subjectScreen")}>
+                onPress={()=>navigation.navigate("SERequirements")}>
                 <Text style={styles.text}>
                     Requirements   
                 </Text>
@@ -57,9 +57,9 @@ const SubjectSelectionScreen = ({route}) => {
         </View>
         </ScrollView>
     </View>
+    
     );
 }
-export default SubjectSelectionScreen;
 
 
 const styles = StyleSheet.create({

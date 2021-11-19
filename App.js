@@ -7,9 +7,10 @@ import {MaterialCommunityIcons} from '@expo/vector-icons'
 import SplashScreen from './Sceens/splashScreen';
 import HomeScreen  from './Sceens/homeScreen';
 import SettingsScreen  from './Sceens/settingsScreen';
-import SubjectSelectionScreenSE  from './Sceens/subjectSelectionScreenSE';
-import SubjectScreen from './Sceens/subjectScreen';
+import SubjectSelectionScreenSE  from './Sceens/subjectSelectionScreens/subjectSelectionScreenSE';
 import CourseSelectionScreen from './Sceens/courseSelectionScreen';
+import SEIntroduction from './Sceens/subjectScreens/SEIntroduction';
+import SERequirements from './Sceens/subjectScreens/SERequiremts';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -99,14 +100,29 @@ export default function App() {
           }} />
 
         <Stack.Screen name="SubjectSelectionSE" component={SubjectSelectionScreenSE} 
-        options={{
+          options={{
+              headerShown: true,
+              title: "Software Engineering",
+              headerStyle:{backgroundColor:"#189AB4"},
+              headerTitleStyle:{ fontWeight:"bold", color:"black"}, 
+              tabBarLabel: '',
+          }} />
+        <Stack.Screen name="SEIntroduction" component={SEIntroduction} 
+          options={{
             headerShown: true,
-            title: "Software Engineering",
+            title: "Introduction",
             headerStyle:{backgroundColor:"#189AB4"},
             headerTitleStyle:{ fontWeight:"bold", color:"black"}, 
             tabBarLabel: '',
-          }} />
-        <Stack.Screen name="SubjectScreen" component={SubjectScreen} />
+          }}/>
+        <Stack.Screen name="SERequirements" component={SERequirements} 
+          options={{
+            headerShown: true,
+            title: "Requirements",
+            headerStyle:{backgroundColor:"#189AB4"},
+            headerTitleStyle:{ fontWeight:"bold", color:"black"}, 
+            tabBarLabel: '',
+        }} />
 
       </Stack.Navigator>
     </NavigationContainer>
