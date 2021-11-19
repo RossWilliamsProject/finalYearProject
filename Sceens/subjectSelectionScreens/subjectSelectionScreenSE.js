@@ -1,10 +1,9 @@
 
-import React from 'react';
-import { View, Text, StyleSheet, Button, ScrollView, TouchableOpacity} from 'react-native';
+import React, { useState } from "react";
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity} from 'react-native';
 
 export default function SubjectSelectionScreen ({navigation}) {
-    return(
-    
+    return(    
     <View style={styles.view}>
         <ScrollView>
         <View style={styles.view}>
@@ -35,7 +34,7 @@ export default function SubjectSelectionScreen ({navigation}) {
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate("subjectScreen")}>
+                onPress={()=>navigation.navigate("OSubjectNotFound")}>
                 <Text style={styles.text}>
                     Some Other Stuff   
                 </Text>
@@ -46,7 +45,7 @@ export default function SubjectSelectionScreen ({navigation}) {
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate("subjectScreen")}>
+                onPress={()=>navigation.navigate("OSubjectNotFound")}>
                 <Text style={styles.text}>
                     Extra   
                 </Text>
@@ -70,15 +69,17 @@ const styles = StyleSheet.create({
     button: {
         backgroundColor: 'white',
         width:375,
-        height:100,
-        justifyContent: 'center',
+        height:60,
+        justifyContent: 'space-between',
+        padding: 10,
         alignItems: 'center',
         borderRadius:20,
         flexDirection: 'row',
     },
     text: {
         color: 'black',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontSize: 20
     },
     checkbox: {
         alignSelf: "center",

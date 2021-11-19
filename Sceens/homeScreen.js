@@ -35,8 +35,8 @@ export default function HomeScreen ({ navigation }) {
 const styles = StyleSheet.create({
     button: {
         backgroundColor: 'white',
-        width: 150,
-        height: 40,
+        width:200,
+        height:60,
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 50,
@@ -44,7 +44,8 @@ const styles = StyleSheet.create({
     },
     text: {
         color: 'black',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontSize:20
     },
     space: {
         width: 20,

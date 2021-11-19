@@ -7,9 +7,11 @@ import SplashScreen from './Sceens/splashScreen';
 import HomeScreen  from './Sceens/homeScreen';
 import SettingsScreen  from './Sceens/settingsScreen';
 import SubjectSelectionScreenSE  from './Sceens/subjectSelectionScreens/subjectSelectionScreenSE';
+import SubjectSelectionOther  from './Sceens/subjectSelectionScreens/SubjectSelectionOther';
 import CourseSelectionScreen from './Sceens/courseSelectionScreen';
 import SEIntroduction from './Sceens/subjectScreens/SEIntroduction';
 import SERequirements from './Sceens/subjectScreens/SERequiremts';
+import OSubjectNotFound from './Sceens/subjectScreens/OSubjectNotFound';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -106,7 +108,13 @@ export default function App() {
               headerStyle:{backgroundColor:"#189AB4"},
               headerTitleStyle:{ fontWeight:"bold", color:"black"}, 
           }} />
-
+        <Stack.Screen name="SubjectSelectionOther" component={SubjectSelectionOther} 
+          options={{
+              headerShown: true,
+              title: "Selected Subject",
+              headerStyle:{backgroundColor:"#189AB4"},
+              headerTitleStyle:{ fontWeight:"bold", color:"black"}, 
+          }} />
 
 
         {/*LIST OF SOFTWARE ENGINEERING SUBJECTS*/}
@@ -125,6 +133,15 @@ export default function App() {
             headerTitleStyle:{ fontWeight:"bold", color:"black"}, 
         }} />
 
+
+
+        <Stack.Screen name="OSubjectNotFound" component={OSubjectNotFound} 
+          options={{
+            headerShown: true,
+            title: "Subject Not Found",
+            headerStyle:{backgroundColor:"#189AB4"},
+            headerTitleStyle:{ fontWeight:"bold", color:"black"}, 
+        }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

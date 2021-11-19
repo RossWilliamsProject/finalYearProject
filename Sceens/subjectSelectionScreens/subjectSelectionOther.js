@@ -1,19 +1,20 @@
-import React from 'react';
-import { View, Text, StyleSheet, ScrollView, Button, TouchableOpacity} from 'react-native';
 
-export default function CourseSelectionScreen ({navigation}) {
-    return(
-    <ScrollView>
+import React, { useState } from "react";
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity} from 'react-native';
+
+export default function SubjectSelectionOther ({navigation}) {
+    return(    
     <View style={styles.view}>
-        <Text>Course Selection Screen</Text>
-
+        <ScrollView>
+        <View style={styles.view}>
+        <Text>Course Not Yet Implemented</Text>
         <View style={styles.space} />
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate('SubjectSelectionSE')}>
+                onPress={()=>navigation.navigate("OSubjectNotFound")}>
                 <Text style={styles.text}>
-                    Software Engineering 
+                    Subject One   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -22,9 +23,9 @@ export default function CourseSelectionScreen ({navigation}) {
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate("SubjectSelectionOther")}>
+                onPress={()=>navigation.navigate("OSubjectNotFound")}>
                 <Text style={styles.text}>
-                    Course Two   
+                    Subject Two   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -33,9 +34,9 @@ export default function CourseSelectionScreen ({navigation}) {
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate("SubjectSelectionOther")}>
+                onPress={()=>navigation.navigate("OSubjectNotFound")}>
                 <Text style={styles.text}>
-                    Course Three   
+                    Subject Three   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -44,9 +45,9 @@ export default function CourseSelectionScreen ({navigation}) {
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate("SubjectSelectionOther")}>
+                onPress={()=>navigation.navigate("OSubjectNotFound")}>
                 <Text style={styles.text}>
-                    Course Four   
+                    Subject Four   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -55,9 +56,9 @@ export default function CourseSelectionScreen ({navigation}) {
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate("SubjectSelectionOther")}>
+                onPress={()=>navigation.navigate("OSubjectNotFound")}>
                 <Text style={styles.text}>
-                    Course Five   
+                    Subject Five   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -66,9 +67,9 @@ export default function CourseSelectionScreen ({navigation}) {
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate("SubjectSelectionOther")}>
+                onPress={()=>navigation.navigate("OSubjectNotFound")}>
                 <Text style={styles.text}>
-                    Course Six   
+                    Subject Six   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -77,9 +78,9 @@ export default function CourseSelectionScreen ({navigation}) {
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate("SubjectSelectionOther")}>
+                onPress={()=>navigation.navigate("OSubjectNotFound")}>
                 <Text style={styles.text}>
-                    Course Seven   
+                    Subject Seven   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -88,9 +89,9 @@ export default function CourseSelectionScreen ({navigation}) {
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate("SubjectSelectionOther")}>
+                onPress={()=>navigation.navigate("OSubjectNotFound")}>
                 <Text style={styles.text}>
-                    Course Eight   
+                    Subject Nine   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -99,9 +100,20 @@ export default function CourseSelectionScreen ({navigation}) {
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate("SubjectSelectionOther")}>
+                onPress={()=>navigation.navigate("OSubjectNotFound")}>
                 <Text style={styles.text}>
-                    Course Nine   
+                    Subject Ten   
+                </Text>
+                <Text>   </Text>
+        </TouchableOpacity>
+        
+        <View style={styles.space} />
+
+        <TouchableOpacity 
+                style={styles.button} 
+                onPress={()=>navigation.navigate("OSubjectNotFound")}>
+                <Text style={styles.text}>
+                    Subject Eleven   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -110,9 +122,9 @@ export default function CourseSelectionScreen ({navigation}) {
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate("SubjectSelectionOther")}>
+                onPress={()=>navigation.navigate("OSubjectNotFound")}>
                 <Text style={styles.text}>
-                    Course Ten   
+                    Subject Twelve   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -121,28 +133,31 @@ export default function CourseSelectionScreen ({navigation}) {
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate("SubjectSelectionOther")}>
+                onPress={()=>navigation.navigate("OSubjectNotFound")}>
                 <Text style={styles.text}>
-                    Course Eleven   
+                    Subject Thirteen   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
-         
+
         <View style={styles.space} />
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate("SubjectSelectionOthers")}>
+                onPress={()=>navigation.navigate("OSubjectNotFound")}>
                 <Text style={styles.text}>
-                    Course Twelve   
+                    Subject Fourteen   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
+        </View>
+        </ScrollView>
     </View>
-    </ScrollView>
-    )
-  }
-  
+    
+    );
+}
+
+
 const styles = StyleSheet.create({
     view: { flex:1,
         alignItems:'center',
