@@ -65,7 +65,8 @@ export default function SubjectSelectionScreen ({navigation}) {
 
 
 const styles = StyleSheet.create({
-    view: { flex:1,
+    view: { 
+        flex:1,
         alignItems:'center',
         backgroundColor: "#D9E3E5"
     },

@@ -1,12 +1,14 @@
 
 import React from 'react';
-import { View, Text} from 'react-native';
+import { View, Text, ScrollView} from 'react-native';
 
 export default function SERequirements () {
     return(
     <View style={{
         backgroundColor: "#D9E3E5"}}>
-      <Text>Requirements</Text>
+      <ScrollView>
+        <Text>Requirements</Text>
+      </ScrollView>
     </View>
     )
   }
