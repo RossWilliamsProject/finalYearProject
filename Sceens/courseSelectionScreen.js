@@ -26,7 +26,7 @@ export default function CourseSelectionScreen ({navigation}) {
                 style={styles.button} 
                 onPress={()=>navigation.navigate("SubjectSelectionOther")}>
                 <Text style={styles.text}>
-                    Course Two   
+                    Computer Fundementals   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -37,7 +37,7 @@ export default function CourseSelectionScreen ({navigation}) {
                 style={styles.button} 
                 onPress={()=>navigation.navigate("SubjectSelectionOther")}>
                 <Text style={styles.text}>
-                    Course Three   
+                    Distributed Systems   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -48,7 +48,7 @@ export default function CourseSelectionScreen ({navigation}) {
                 style={styles.button} 
                 onPress={()=>navigation.navigate("SubjectSelectionOther")}>
                 <Text style={styles.text}>
-                    Course Four   
+                    Languages and Computation   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -59,7 +59,7 @@ export default function CourseSelectionScreen ({navigation}) {
                 style={styles.button} 
                 onPress={()=>navigation.navigate("SubjectSelectionOther")}>
                 <Text style={styles.text}>
-                    Course Five   
+                    Algorithms    
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -70,7 +70,7 @@ export default function CourseSelectionScreen ({navigation}) {
                 style={styles.button} 
                 onPress={()=>navigation.navigate("SubjectSelectionOther")}>
                 <Text style={styles.text}>
-                    Course Six   
+                    Funtional Programming   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -81,7 +81,7 @@ export default function CourseSelectionScreen ({navigation}) {
                 style={styles.button} 
                 onPress={()=>navigation.navigate("SubjectSelectionOther")}>
                 <Text style={styles.text}>
-                    Course Seven   
+                    Programming Paradigms   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -92,7 +92,7 @@ export default function CourseSelectionScreen ({navigation}) {
                 style={styles.button} 
                 onPress={()=>navigation.navigate("SubjectSelectionOther")}>
                 <Text style={styles.text}>
-                    Course Eight   
+                    Operating Systems   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -103,7 +103,7 @@ export default function CourseSelectionScreen ({navigation}) {
                 style={styles.button} 
                 onPress={()=>navigation.navigate("SubjectSelectionOther")}>
                 <Text style={styles.text}>
-                    Course Nine   
+                    Maintainable Software   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -114,7 +114,7 @@ export default function CourseSelectionScreen ({navigation}) {
                 style={styles.button} 
                 onPress={()=>navigation.navigate("SubjectSelectionOther")}>
                 <Text style={styles.text}>
-                    Course Ten   
+                    System Architecture   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -125,7 +125,7 @@ export default function CourseSelectionScreen ({navigation}) {
                 style={styles.button} 
                 onPress={()=>navigation.navigate("SubjectSelectionOther")}>
                 <Text style={styles.text}>
-                    Course Eleven   
+                    Mathematics for CompSci   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -136,7 +136,7 @@ export default function CourseSelectionScreen ({navigation}) {
                 style={styles.button} 
                 onPress={()=>navigation.navigate("SubjectSelectionOthers")}>
                 <Text style={styles.text}>
-                    Course Twelve   
+                    Human Computer Interaction   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>

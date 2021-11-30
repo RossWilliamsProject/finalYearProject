@@ -39,7 +39,7 @@ export default function SubjectSelectionScreen ({navigation}) {
                 style={styles.button} 
                 onPress={()=>navigation.navigate("OSubjectNotFound")}>
                 <Text style={styles.text}>
-                    Some Other Stuff   
+                    Requirements Gathering   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -50,10 +50,71 @@ export default function SubjectSelectionScreen ({navigation}) {
                 style={styles.button} 
                 onPress={()=>navigation.navigate("OSubjectNotFound")}>
                 <Text style={styles.text}>
-                    Extra   
+                    Requirements Modelling   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
+        <View style={styles.space} />
+
+        <TouchableOpacity 
+                style={styles.button} 
+                onPress={()=>navigation.navigate("OSubjectNotFound")}>
+                <Text style={styles.text}>
+                    Specifiction   
+                </Text>
+                <Text>   </Text>
+        </TouchableOpacity>
+        <View style={styles.space} />
+
+        <TouchableOpacity 
+                style={styles.button} 
+                onPress={()=>navigation.navigate("OSubjectNotFound")}>
+                <Text style={styles.text}>
+                    Prototyping   
+                </Text>
+                <Text>   </Text>
+        </TouchableOpacity>
+        <View style={styles.space} />
+
+        <TouchableOpacity 
+                style={styles.button} 
+                onPress={()=>navigation.navigate("OSubjectNotFound")}>
+                <Text style={styles.text}>
+                    Test Plans   
+                </Text>
+                <Text>   </Text>
+        </TouchableOpacity>
+        <View style={styles.space} />
+
+        <TouchableOpacity 
+                style={styles.button} 
+                onPress={()=>navigation.navigate("OSubjectNotFound")}>
+                <Text style={styles.text}>
+                    Implementation   
+                </Text>
+                <Text>   </Text>
+        </TouchableOpacity>
+        <View style={styles.space} />
+
+        <TouchableOpacity 
+                style={styles.button} 
+                onPress={()=>navigation.navigate("OSubjectNotFound")}>
+                <Text style={styles.text}>
+                    CI Deployment   
+                </Text>
+                <Text>   </Text>
+        </TouchableOpacity>
+        <View style={styles.space} />
+
+        <TouchableOpacity 
+                style={styles.button} 
+                onPress={()=>navigation.navigate("OSubjectNotFound")}>
+                <Text style={styles.text}>
+                    Test Driven Development   
+                </Text>
+                <Text>   </Text>
+        </TouchableOpacity>
+
 
         <View style={styles.space} />
         </View>
