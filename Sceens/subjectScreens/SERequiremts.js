@@ -8,6 +8,7 @@ export default function SERequirements () {
         backgroundColor: "#D9E3E5"}}>
       <ScrollView>
         <Text>Requirements</Text>
+        
       </ScrollView>
     </View>
     )

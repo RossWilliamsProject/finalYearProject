@@ -1,79 +1,101 @@
 import * as React from 'react';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import {NavigationContainer} from '@react-navigation/native';
-import {MaterialCommunityIcons} from '@expo/vector-icons'
+import { View, Text, TouchableOpacity, StyleSheet, ImageBackground } from 'react-native';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { MaterialCommunityIcons } from '@expo/vector-icons'
 import SplashScreen from './Sceens/splashScreen';
-import HomeScreen  from './Sceens/homeScreen';
-import SettingsScreen  from './Sceens/settingsScreen';
-import SubjectSelectionScreenSE  from './Sceens/subjectSelectionScreens/subjectSelectionScreenSE';
-import SubjectSelectionOther  from './Sceens/subjectSelectionScreens/subjectSelectionOther';
+import HomeScreen from './Sceens/homeScreen';
+import SettingsScreen from './Sceens/settingsScreen';
+import ProfileScreen from './Sceens/profileScreen';
+import LeaderboardScreen from './Sceens/leaderboardScreen';
+import SubjectSelectionScreenSE from './Sceens/subjectSelectionScreens/subjectSelectionScreenSE';
+import SubjectSelectionOther from './Sceens/subjectSelectionScreens/subjectSelectionOther';
 import CourseSelectionScreen from './Sceens/courseSelectionScreen';
 import SEIntroduction from './Sceens/subjectScreens/SEIntroduction';
 import SERequirements from './Sceens/subjectScreens/SERequiremts';
 import OSubjectNotFound from './Sceens/subjectScreens/OSubjectNotFound';
+import Icon from '@mdi/react'
+import { mdiTrophy } from '@mdi/js'
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
-function MyTabs(){
+function MyTabs() {
   return (
-    
-    <Tab.Navigator 
+
+    <Tab.Navigator
       initialRouteName="home"
-      screenOptions = {{
-          "tabBarActiveTintColor": "black",
-          "tabBarInactiveTintColor": "white",
-          "tabBarActiveBackgroundColor": "#189AB4",
-          "tabBarInactiveBackgroundColor": "#05445E",
-          "tabBarStyle": [
-            {
-              "display": "flex"
-            },
-            null
-          ]
-        }}
+      screenOptions={{
+        "tabBarActiveTintColor": "black",
+        "tabBarInactiveTintColor": "white",
+        "tabBarActiveBackgroundColor": "#189AB4",
+        "tabBarInactiveBackgroundColor": "#05445E",
+        "tabBarStyle": [
+          {
+            "display": "flex"
+          },
+          null
+        ]
+      }}
     >
-      
-      <Tab.Screen 
-        name="settings" 
-        component={SettingsScreen}
+
+      <Tab.Screen
+        name="leaderboard"
+        component={LeaderboardScreen}
         options={{
           title: "CompleteEducation",
-          headerStyle:{backgroundColor:"#189AB4"},
-          headerTitleStyle:{fontWeight:"bold", color:'black'},
+          headerRight: () => (
+            <TouchableOpacity
+            //</Text>onPress={() => navigation.navigate("SettingsScreen")}
+              style={styles.button}>
+              <MaterialCommunityIcons name="cog" color="black" size={20} />
+            </TouchableOpacity>),
+          headerStyle: { backgroundColor: "#189AB4" },
+          headerTitleStyle: { fontWeight: "bold", color: 'black' },
           tabBarLabel: '',
-          tabBarIcon: ({color, size}) =>
-            <MaterialCommunityIcons name="cog-outline" color={color} size={size}
-              style={{textAlignVertical: 'center'}}/>
-        }}/>
+          tabBarIcon: ({ color, size }) =>
+            <Icon path={mdiTrophy} size={1} color={color} />
+        }} />
 
-      <Tab.Screen 
-        name="home" 
+      <Tab.Screen
+        name="home"
         component={HomeScreen}
         options={{
           title: "CompleteEducation",
-          headerStyle:{backgroundColor:"#189AB4"},
-          headerTitleStyle:{ fontWeight:"bold", color:"black"},
+          headerRight: () => (
+            <TouchableOpacity
+            //onPress={() => navigation.navigate("SettingsScreen")}
+            style={styles.button}>
+              <MaterialCommunityIcons name="cog" color="black" size={20} padding="20px  " />
+            </TouchableOpacity>),
+          headerStyle: { backgroundColor: "#189AB4" },
+          headerTitleStyle: { fontWeight: "bold", color: "black" },
           tabBarLabel: '',
-          borderBottomWidth:0,
-          tabBarIcon: ({color, size}) =>
-            <MaterialCommunityIcons name="home" color={color} size={size} 
-              style={{textAlignVertical: 'center'}}/>
-        }}/>
+          borderBottomWidth: 0,
+          tabBarIcon: ({ color, size }) =>
+            <MaterialCommunityIcons name="home" color={color} size={size}
+              style={{ textAlignVertical: 'center' }} />
+        }} />
 
-      <Tab.Screen 
-        name="courseSelection" 
+      <Tab.Screen
+        name="courseSelection"
         component={CourseSelectionScreen}
         options={{
           title: "CompleteEducation",
-          headerStyle:{backgroundColor:"#189AB4"},
-          headerTitleStyle:{ fontWeight:"bold", color:"black"}, 
+          headerRight: () => (
+            <TouchableOpacity
+            //onPress={() => navigation.navigate("SettingsScreen")}
+            style={styles.button}>
+              <MaterialCommunityIcons name="cog" color="black" size={20} />
+            </TouchableOpacity>),
+          headerStyle: { backgroundColor: "#189AB4" },
+          headerTitleStyle: { fontWeight: "bold", color: "black" },
           tabBarLabel: '',
-          tabBarIcon: ({color, size}) =>
+          tabBarIcon: ({ color, size }) =>
             <MaterialCommunityIcons name="book-open" color={color} size={size}
-              style={{textAlignVertical: 'center'}}/>
-        }}/>
+              style={{ textAlignVertical: 'center' }} />
+        }} />
     </Tab.Navigator>
   );
 }
@@ -81,20 +103,30 @@ function MyTabs(){
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="" 
-      screenOptions={{
+      <Stack.Navigator initialRouteName=""
+        screenOptions={{
           headerShown: false
-      }}>
+        }}>
         <Stack.Screen options={{
-            headerShown: false,
-          }}
+          headerShown: false,
+        }}
           name="splashScreen"
-          component= {SplashScreen}
+          component={SplashScreen}
         />
 
-        <Stack.Screen 
-          name="HomeTabs" 
-          component={MyTabs}  
+        <Stack.Screen options={{
+            headerShown: true,
+            title: "Profile",
+            headerStyle: { backgroundColor: "#189AB4" },
+            headerTitleStyle: { fontWeight: "bold", color: "black" },
+        }}
+          name="profileScreen"
+          component={ProfileScreen}
+        />
+
+        <Stack.Screen
+          name="HomeTabs"
+          component={MyTabs}
           screenOptions={{
             headerShown: false
           }} />
@@ -102,48 +134,60 @@ export default function App() {
 
 
         {/*LIST OF COURSES*/}
-        <Stack.Screen name="SubjectSelectionSE" component={SubjectSelectionScreenSE} 
+        <Stack.Screen name="SubjectSelectionSE" component={SubjectSelectionScreenSE}
           options={{
-              headerShown: true,
-              title: "Software Engineering",
-              headerStyle:{backgroundColor:"#189AB4"},
-              headerTitleStyle:{ fontWeight:"bold", color:"black"}, 
+            headerShown: true,
+            title: "Software Engineering",
+            headerStyle: { backgroundColor: "#189AB4" },
+            headerTitleStyle: { fontWeight: "bold", color: "black" },
           }} />
-        <Stack.Screen name="SubjectSelectionOther" component={SubjectSelectionOther} 
+        <Stack.Screen name="SubjectSelectionOther" component={SubjectSelectionOther}
           options={{
-              headerShown: true,
-              title: "Selected Subject",
-              headerStyle:{backgroundColor:"#189AB4"},
-              headerTitleStyle:{ fontWeight:"bold", color:"black"}, 
+            headerShown: true,
+            title: "Selected Subject",
+            headerStyle: { backgroundColor: "#189AB4" },
+            headerTitleStyle: { fontWeight: "bold", color: "black" },
           }} />
 
 
         {/*LIST OF SOFTWARE ENGINEERING SUBJECTS*/}
-        <Stack.Screen name="SEIntroduction" component={SEIntroduction} 
+        <Stack.Screen name="SEIntroduction" component={SEIntroduction}
           options={{
             headerShown: true,
             title: "Introduction",
-            headerStyle:{backgroundColor:"#189AB4"},
-            headerTitleStyle:{ fontWeight:"bold", color:"black"}, 
-          }}/>
-        <Stack.Screen name="SERequirements" component={SERequirements} 
+            headerStyle: { backgroundColor: "#189AB4" },
+            headerTitleStyle: { fontWeight: "bold", color: "black" },
+          }} />
+        <Stack.Screen name="SERequirements" component={SERequirements}
           options={{
             headerShown: true,
             title: "Requirements",
-            headerStyle:{backgroundColor:"#189AB4"},
-            headerTitleStyle:{ fontWeight:"bold", color:"black"}, 
-        }} />
+            headerStyle: { backgroundColor: "#189AB4" },
+            headerTitleStyle: { fontWeight: "bold", color: "black" },
+          }} />
 
 
-
-        <Stack.Screen name="OSubjectNotFound" component={OSubjectNotFound} 
+        <Stack.Screen name="OSubjectNotFound" component={OSubjectNotFound}
           options={{
             headerShown: true,
             title: "Subject Not Found",
-            headerStyle:{backgroundColor:"#189AB4"},
-            headerTitleStyle:{ fontWeight:"bold", color:"black"}, 
-        }} />
+            headerStyle: { backgroundColor: "#189AB4" },
+            headerTitleStyle: { fontWeight: "bold", color: "black" },
+          }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
+
+
+const styles = StyleSheet.create({
+  button: {
+    backgroundColor: '#189AB4',
+    width: 200,
+    height: 60,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 50,
+    flexDirection: 'row',
+  },
+});
