@@ -6,6 +6,7 @@ import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import SplashScreen from './Sceens/splashScreen';
 import HomeScreen from './Sceens/homeScreen';
+import QuizScreen from './Sceens/quizScreen';
 import SettingsScreen from './Sceens/settingsScreen';
 import ProfileScreen from './Sceens/profileScreen';
 import LeaderboardScreen from './Sceens/leaderboardScreen';
@@ -47,7 +48,7 @@ function MyTabs() {
           title: "CompleteEducation",
           headerRight: () => (
             <TouchableOpacity
-            //</Text>onPress={() => navigation.navigate("SettingsScreen")}
+              //</Text>onPress={() => navigation.navigate("SettingsScreen")}
               style={styles.button}>
               <MaterialCommunityIcons name="cog" color="black" size={20} />
             </TouchableOpacity>),
@@ -65,8 +66,8 @@ function MyTabs() {
           title: "CompleteEducation",
           headerRight: () => (
             <TouchableOpacity
-            //onPress={() => navigation.navigate("SettingsScreen")}
-            style={styles.button}>
+              //onPress={() => navigation.navigate("SettingsScreen")}
+              style={styles.button}>
               <MaterialCommunityIcons name="cog" color="black" size={20} padding="20px  " />
             </TouchableOpacity>),
           headerStyle: { backgroundColor: "#189AB4" },
@@ -85,8 +86,8 @@ function MyTabs() {
           title: "CompleteEducation",
           headerRight: () => (
             <TouchableOpacity
-            //onPress={() => navigation.navigate("SettingsScreen")}
-            style={styles.button}>
+              //onPress={() => navigation.navigate("SettingsScreen")}
+              style={styles.button}>
               <MaterialCommunityIcons name="cog" color="black" size={20} />
             </TouchableOpacity>),
           headerStyle: { backgroundColor: "#189AB4" },
@@ -107,6 +108,7 @@ export default function App() {
         screenOptions={{
           headerShown: false
         }}>
+
         <Stack.Screen options={{
           headerShown: false,
         }}
@@ -115,13 +117,23 @@ export default function App() {
         />
 
         <Stack.Screen options={{
-            headerShown: true,
-            title: "Profile",
-            headerStyle: { backgroundColor: "#189AB4" },
-            headerTitleStyle: { fontWeight: "bold", color: "black" },
+          headerShown: true,
+          title: "Profile",
+          headerStyle: { backgroundColor: "#189AB4" },
+          headerTitleStyle: { fontWeight: "bold", color: "black" },
         }}
           name="profileScreen"
           component={ProfileScreen}
+        />
+
+        <Stack.Screen options={{
+          headerShown: true,
+          title:"Recap Quiz",
+          headerStyle: { backgroundColor: "#189AB4" },
+          headerTitleStyle: { fontWeight: "bold", color: "black" },
+        }}
+          name="quizScreen"
+          component={QuizScreen}
         />
 
         <Stack.Screen

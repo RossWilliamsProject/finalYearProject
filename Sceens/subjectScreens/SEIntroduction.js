@@ -1,8 +1,12 @@
 
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, contentContainer} from 'react-native';
+import { View, Text, StyleSheet, ScrollView, contentContainer, TouchableOpacity} from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons'
+import { useNavigation } from '@react-navigation/native';
 
-export default function SEIntroduction () {
+export default function SEIntroduction ( ) { 
+  const navigation = useNavigation();
+    
   return(    
     <View style={styles.backgroundview}>
         <ScrollView 
@@ -77,6 +81,17 @@ export default function SEIntroduction () {
           better ‘engineer’ software.
           </Text>
         </View>
+
+        <TouchableOpacity
+                style={styles.button}
+                onPress={() => navigation.navigate("quizScreen")}>
+                <Text style={styles.text}>
+                    Recap Quiz
+                </Text>
+                <Text>   </Text>
+                <MaterialCommunityIcons name="history" color="black" size={20} />
+            </TouchableOpacity>
+
         </ScrollView>
     </View>
     
