@@ -4,119 +4,119 @@ import { View, Text, StyleSheet, ScrollView, TouchableOpacity} from 'react-
 
 export default function SubjectSelectionScreen ({navigation}) {
     return(    
-    <View style={styles.view}>
+    <View style={Styles.view}>
         <ScrollView>
-        <View style={styles.view}>
-        <View style={styles.space} />
+        <View style={Styles.view}>
+        <View style={Styles.space} />
 
-        <Text style={styles.text}>Press To Learn!</Text>
+        <Text style={Styles.text}>Press To Learn!</Text>
         
-        <View style={styles.space} />
+        <View style={Styles.space} />
 
         <TouchableOpacity 
-                style={styles.button} 
+                style={Styles.button} 
                 onPress={()=>navigation.navigate("SEIntroduction")}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     Introduction   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
 
-        <View style={styles.space} />
+        <View style={Styles.space} />
 
         <TouchableOpacity 
-                style={styles.button} 
+                style={Styles.button} 
                 onPress={()=>navigation.navigate("SERequirements")}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     Requirements   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
 
-        <View style={styles.space} />
+        <View style={Styles.space} />
 
         <TouchableOpacity 
-                style={styles.button} 
+                style={Styles.button} 
                 onPress={()=>navigation.navigate("OSubjectNotFound")}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     Requirements Gathering   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
 
-        <View style={styles.space} />
+        <View style={Styles.space} />
 
         <TouchableOpacity 
-                style={styles.button} 
+                style={Styles.button} 
                 onPress={()=>navigation.navigate("OSubjectNotFound")}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     Requirements Modelling   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
-        <View style={styles.space} />
+        <View style={Styles.space} />
 
         <TouchableOpacity 
-                style={styles.button} 
+                style={Styles.button} 
                 onPress={()=>navigation.navigate("OSubjectNotFound")}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     Specifiction   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
-        <View style={styles.space} />
+        <View style={Styles.space} />
 
         <TouchableOpacity 
-                style={styles.button} 
+                style={Styles.button} 
                 onPress={()=>navigation.navigate("OSubjectNotFound")}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     Prototyping   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
-        <View style={styles.space} />
+        <View style={Styles.space} />
 
         <TouchableOpacity 
-                style={styles.button} 
+                style={Styles.button} 
                 onPress={()=>navigation.navigate("OSubjectNotFound")}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     Test Plans   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
-        <View style={styles.space} />
+        <View style={Styles.space} />
 
         <TouchableOpacity 
-                style={styles.button} 
+                style={Styles.button} 
                 onPress={()=>navigation.navigate("OSubjectNotFound")}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     Implementation   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
-        <View style={styles.space} />
+        <View style={Styles.space} />
 
         <TouchableOpacity 
-                style={styles.button} 
+                style={Styles.button} 
                 onPress={()=>navigation.navigate("OSubjectNotFound")}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     CI Deployment   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
-        <View style={styles.space} />
+        <View style={Styles.space} />
 
         <TouchableOpacity 
-                style={styles.button} 
+                style={Styles.button} 
                 onPress={()=>navigation.navigate("OSubjectNotFound")}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     Test Driven Development   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
 
 
-        <View style={styles.space} />
+        <View style={Styles.space} />
         </View>
         </ScrollView>
     </View>
@@ -125,7 +125,7 @@ export default function SubjectSelectionScreen ({navigation}) {
 }
 
 
-const styles = StyleSheet.create({
+const Styles = StyleSheet.create({
     view: { 
         flex:1,
         alignItems:'center',

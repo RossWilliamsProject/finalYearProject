@@ -6,19 +6,19 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 export default function SplashScreen ({navigation}) {
 
     return (
-    <View style={styles.container}>
+    <View style={Styles.container}>
         
-        <View style={styles.header}>
+        <View style={Styles.header}>
             <Image source={require('../assets/waves.png')}/>
         </View>
 
-        <Animatable.View style={styles.footer} animation="fadeInUpBig">
-            <Text style={styles.title}>
+        <Animatable.View style={Styles.footer} animation="fadeInUpBig">
+            <Text style={Styles.title}>
                 Welcome to CompleteEducation!
             </Text>
-            <View style={styles.view}>
-                <TouchableOpacity style={styles.button} onPress={()=>navigation.navigate('HomeTabs')}>
-                    <Text style={styles.buttontext}>Start Learning!</Text>
+            <View style={Styles.view}>
+                <TouchableOpacity style={Styles.button} onPress={()=>navigation.navigate('HomeTabs')}>
+                    <Text style={Styles.buttontext}>Start Learning!</Text>
                     <MaterialIcons name="navigate-next" color="black" size={20}/>
                 </TouchableOpacity>
             </View>
@@ -31,7 +31,7 @@ export default function SplashScreen ({navigation}) {
 const {height} = Dimensions.get("screen");
 const height_logo = height * 0.3;
 
-const styles = StyleSheet.create({
+const Styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: "#D9E3E5"

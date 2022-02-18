@@ -55,8 +55,6 @@ function MyTabs() {
           headerStyle: { backgroundColor: "#189AB4" },
           headerTitleStyle: { fontWeight: "bold", color: 'black' },
           tabBarLabel: '',
-          tabBarIcon: ({ color, size }) =>
-            <Icon path={mdiTrophy} size={1} color={color} />
         }} />
 
       <Tab.Screen

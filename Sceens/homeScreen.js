@@ -1,57 +1,54 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Container, ImageBackground } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, ImageBackground } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import Icon from '@mdi/react'
-import { mdiAccount, mdiTrophy } from '@mdi/js'
+import { MdiAccount, MdiTrophy } from '@mdi/js'
 
 
 export default function HomeScreen({ navigation }) {
-
     return (
         
-        <ImageBackground source={{ uri: 'https://pbs.twimg.com/media/FElwa2vWUAMHeg6?format=jpg&name=medium' }} style={styles.view}>
-
+        <ImageBackground source={{ uri: 'https://pbs.twimg.com/media/FElwa2vWUAMHeg6?format=jpg&name=medium' }} style={Styles.view}>
             <TouchableOpacity
-                style={styles.button}
+                style={Styles.button}
                 onPress={() => navigation.navigate("profileScreen")}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     Profile
                 </Text>
                 <Text>   </Text>
-                <Icon path={mdiAccount} size={1} color="black" />
+                <MaterialCommunityIcons name="" color="black" size={20} />
             </TouchableOpacity>
 
-            <View style={styles.space} />
+            <View style={Styles.space} />
 
             <TouchableOpacity
-                style={styles.button}
+                style={Styles.button}
                 onPress={() => navigation.navigate("leaderboard")}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     Leaderboard
                 </Text>
                 <Text>   </Text>
-                <Icon path={mdiTrophy} size={1} color="black" />
+                <MaterialCommunityIcons name="" color="black" size={20} />
             </TouchableOpacity>
 
-            <View style={styles.space} />
+            <View style={Styles.space} />
 
             <TouchableOpacity
-                style={styles.button}
+                style={Styles.button}
                 onPress={() => navigation.navigate("courseSelection")}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     Courses
                 </Text>
                 <Text>   </Text>
                 <MaterialCommunityIcons name="book-open" color="black" size={20} />
             </TouchableOpacity>
 
-            <View style={styles.space} />
+            <View style={Styles.space} />
         </ImageBackground>
     )
-    
 }
 
-const styles = StyleSheet.create({
+const Styles = StyleSheet.create({
     button: {
         backgroundColor: 'white',
         width: 200,

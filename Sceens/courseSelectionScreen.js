@@ -4,138 +4,138 @@ import { View, Text, StyleSheet, ScrollView, Button, TouchableOpacity} from�
 export default function CourseSelectionScreen ({navigation}) {
     return(
     <ScrollView>
-    <View style={styles.view}>
-        <View style={styles.space} />
+    <View style={Styles.view}>
+        <View style={Styles.space} />
 
-        <Text style={styles.text}>Select Course</Text>
+        <Text style={Styles.text}>Select Course</Text>
 
-        <View style={styles.space} />
+        <View style={Styles.space} />
 
         <TouchableOpacity 
-                style={styles.button} 
+                style={Styles.button} 
                 onPress={()=>navigation.navigate('SubjectSelectionSE')}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     Software Engineering 
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
 
-        <View style={styles.space} />
+        <View style={Styles.space} />
 
         <TouchableOpacity 
-                style={styles.button} 
+                style={Styles.button} 
                 onPress={()=>navigation.navigate("SubjectSelectionOther")}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     Computer Fundementals   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
 
-        <View style={styles.space} />
+        <View style={Styles.space} />
 
         <TouchableOpacity 
-                style={styles.button} 
+                style={Styles.button} 
                 onPress={()=>navigation.navigate("SubjectSelectionOther")}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     Distributed Systems   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
 
-        <View style={styles.space} />
+        <View style={Styles.space} />
 
         <TouchableOpacity 
-                style={styles.button} 
+                style={Styles.button} 
                 onPress={()=>navigation.navigate("SubjectSelectionOther")}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     Languages and Computation   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
 
-        <View style={styles.space} />
+        <View style={Styles.space} />
 
         <TouchableOpacity 
-                style={styles.button} 
+                style={Styles.button} 
                 onPress={()=>navigation.navigate("SubjectSelectionOther")}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     Algorithms    
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
 
-        <View style={styles.space} />
+        <View style={Styles.space} />
 
         <TouchableOpacity 
-                style={styles.button} 
+                style={Styles.button} 
                 onPress={()=>navigation.navigate("SubjectSelectionOther")}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     Funtional Programming   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
 
-        <View style={styles.space} />
+        <View style={Styles.space} />
 
         <TouchableOpacity 
-                style={styles.button} 
+                style={Styles.button} 
                 onPress={()=>navigation.navigate("SubjectSelectionOther")}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     Programming Paradigms   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
 
-        <View style={styles.space} />
+        <View style={Styles.space} />
 
         <TouchableOpacity 
-                style={styles.button} 
+                style={Styles.button} 
                 onPress={()=>navigation.navigate("SubjectSelectionOther")}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     Operating Systems   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
 
-        <View style={styles.space} />
+        <View style={Styles.space} />
 
         <TouchableOpacity 
-                style={styles.button} 
+                style={Styles.button} 
                 onPress={()=>navigation.navigate("SubjectSelectionOther")}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     Maintainable Software   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
 
-        <View style={styles.space} />
+        <View style={Styles.space} />
 
         <TouchableOpacity 
-                style={styles.button} 
+                style={Styles.button} 
                 onPress={()=>navigation.navigate("SubjectSelectionOther")}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     System Architecture   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
 
-        <View style={styles.space} />
+        <View style={Styles.space} />
 
         <TouchableOpacity 
-                style={styles.button} 
+                style={Styles.button} 
                 onPress={()=>navigation.navigate("SubjectSelectionOther")}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     Mathematics for CompSci   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
          
-        <View style={styles.space} />
+        <View style={Styles.space} />
 
         <TouchableOpacity 
-                style={styles.button} 
+                style={Styles.button} 
                 onPress={()=>navigation.navigate("SubjectSelectionOthers")}>
-                <Text style={styles.text}>
+                <Text style={Styles.text}>
                     Human Computer Interaction   
                 </Text>
                 <Text>   </Text>
@@ -145,7 +145,7 @@ export default function CourseSelectionScreen ({navigation}) {
     )
   }
   
-const styles = StyleSheet.create({
+const Styles = StyleSheet.create({
     view: { flex:1,
         alignItems:'center',
         backgroundColor: "#D9E3E5"

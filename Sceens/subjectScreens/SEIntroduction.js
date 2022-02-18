@@ -5,20 +5,20 @@ import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native';
 
 export default function SEIntroduction ( ) { 
-  const navigation = useNavigation();
+  const Navigation = useNavigation();
     
   return(    
-    <View style={styles.backgroundview}>
+    <View style={Styles.backgroundview}>
         <ScrollView 
-        contentContainerStyle = {styles.contentContainer}>
-        <View style={styles.view}>
+        contentContainerStyle = {Styles.contentContainer}>
+        <View style={Styles.view}>
 
-        <Text style={styles.textHeader}>
+        <Text style={Styles.textHeader}>
         Introduction
         </Text>
 
-        <Text style={styles.boldtext}>Summary of Content:</Text>
-        <Text style={styles.text}> 
+        <Text style={Styles.boldtext}>Summary of Content:</Text>
+        <Text style={Styles.text}> 
            You’ll be introduced to the concept of{"\n"} Software
                 Engineering and will be taken{"\n"} through the software development{"\n"} process:{"\n"}{"\n"}
               - deciding exactly what should be built {"\n"} (Requirements),{"\n"}
@@ -28,8 +28,8 @@ export default function SEIntroduction ( ) {
           </Text>
 
 
-        <Text style={styles.boldtext}>What exactly is Software?</Text>
-        <Text style={styles.text}> 
+        <Text style={Styles.boldtext}>What exactly is Software?</Text>
+        <Text style={Styles.text}> 
           There are many examples:{"\n"}{"\n"}
           A Phone Game App: {"\n"}
           • Ready for real users{"\n"}
@@ -59,17 +59,17 @@ export default function SEIntroduction ( ) {
           {'   '}- All in an installer that ‘deploys’{"\n"}
           </Text>
 
-          <Text style={styles.boldtext}>Software Engineering Definition</Text>
-          <Text style={styles.text}> 
+          <Text style={Styles.boldtext}>Software Engineering Definition</Text>
+          <Text style={Styles.text}> 
           “The application of a systematic, disciplined,
             quantifiable approach to the development,
             operation, and maintenance of software;{"\n"}
             that is, the application of engineering to software” {"\n"}
           </Text>
 
-          <Text style={styles.boldtext}>The Software Crisis</Text>
-          <Text style={styles.text}>Nato, 1968</Text>
-          <Text style={styles.text}> 
+          <Text style={Styles.boldtext}>The Software Crisis</Text>
+          <Text style={Styles.text}>Nato, 1968</Text>
+          <Text style={Styles.text}> 
           • Software was bad, or worse{"\n"}
           {'   '}- Individual-person approaches{"\n"}
           {'   '} to SE didn't scale to software{"\n"}
@@ -83,9 +83,9 @@ export default function SEIntroduction ( ) {
         </View>
 
         <TouchableOpacity
-                style={styles.button}
-                onPress={() => navigation.navigate("quizScreen")}>
-                <Text style={styles.text}>
+                style={Styles.button}
+                onPress={() => Navigation.navigate("quizScreen")}>
+                <Text style={Styles.text}>
                     Recap Quiz
                 </Text>
                 <Text>   </Text>
@@ -99,7 +99,7 @@ export default function SEIntroduction ( ) {
 }
 
 
-const styles = StyleSheet.create({
+const Styles = StyleSheet.create({
     view: { 
         flex:0,
         //alignItems:'center',
