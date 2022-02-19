@@ -137,6 +137,16 @@ const Styles = StyleSheet.create({
       paddingBottom: 10,
       paddingTop: 20,
       width: '100%',
-
-    }
+    },
+    button: {
+      backgroundColor: 'white',
+      width: 375,
+      height: 60,
+      justifyContent: 'space-between',
+      padding: 10,
+      alignItems: 'center',
+      borderRadius: 20,
+      flexDirection: 'row',
+      marginVertical: 5,
+  },
 })

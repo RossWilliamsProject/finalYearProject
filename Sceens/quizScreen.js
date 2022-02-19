@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { QuestionsList } from "./subjectScreens/QuestionsList";
+import { QuestionsList } from "../AppData/AppDataLists/QuestionsList";
 import { v4 as uuidv4 } from "uuid";
 
 export default function QuizScreen({ navigation }) {

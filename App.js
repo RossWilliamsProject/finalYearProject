@@ -50,7 +50,7 @@ function MyTabs() {
             <TouchableOpacity
               //</Text>onPress={() => navigation.navigate("SettingsScreen")}
               style={styles.button}>
-              <MaterialCommunityIcons name="cog" color="black" size={20} />
+              <MaterialCommunityIcons name="cog" color="black" size={25} />
             </TouchableOpacity>),
           headerStyle: { backgroundColor: "#189AB4" },
           headerTitleStyle: { fontWeight: "bold", color: 'black' },
@@ -66,7 +66,7 @@ function MyTabs() {
             <TouchableOpacity
               //onPress={() => navigation.navigate("SettingsScreen")}
               style={styles.button}>
-              <MaterialCommunityIcons name="cog" color="black" size={20} padding="20px  " />
+              <MaterialCommunityIcons name="cog" color="black" size={25} padding="20px  " />
             </TouchableOpacity>),
           headerStyle: { backgroundColor: "#189AB4" },
           headerTitleStyle: { fontWeight: "bold", color: "black" },
@@ -86,7 +86,7 @@ function MyTabs() {
             <TouchableOpacity
               //onPress={() => navigation.navigate("SettingsScreen")}
               style={styles.button}>
-              <MaterialCommunityIcons name="cog" color="black" size={20} />
+              <MaterialCommunityIcons name="cog" color="black" size={25} />
             </TouchableOpacity>),
           headerStyle: { backgroundColor: "#189AB4" },
           headerTitleStyle: { fontWeight: "bold", color: "black" },
@@ -193,11 +193,12 @@ export default function App() {
 const styles = StyleSheet.create({
   button: {
     backgroundColor: '#189AB4',
-    width: 200,
-    height: 60,
-    justifyContent: 'center',
+    width: 50,
+    height: 30,
+    justifyContent: 'flex-end',
     alignItems: 'center',
     borderRadius: 50,
+    paddingEnd: 15,
     flexDirection: 'row',
   },
 });
