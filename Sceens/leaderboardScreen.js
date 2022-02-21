@@ -8,10 +8,11 @@ export default function LeaderboardScreen() {
     <ScrollView>
       <View style={Styles.view}>
         <Text style={Styles.textBold}>LeaderBoard</Text>
+        <Text style={Styles.text}>Your Score is Highlighted in Blue</Text>
         <View>
           {LeaderboardList.map((entry) => (
             <TouchableOpacity
-              style={Styles.button}
+              style={entry.user ? Styles.userButton : Styles.button}
               key={uuidv4()}>
               <Text style={Styles.text}>
                 {entry.displayName}
@@ -35,6 +36,17 @@ const Styles = StyleSheet.create({
   },
   button: {
     backgroundColor: 'white',
+    width: 375,
+    height: 50,
+    justifyContent: 'space-between',
+    padding: 10,
+    alignItems: 'center',
+    borderRadius: 10,
+    flexDirection: 'row',
+    marginVertical: 5,
+  },
+  userButton: {
+    backgroundColor: '#189AB4',
     width: 375,
     height: 50,
     justifyContent: 'space-between',
