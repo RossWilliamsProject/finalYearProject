@@ -10,17 +10,6 @@ export default function QuizScreen({ navigation }) {
     const [showScore, setShowScore] = useState(false);
     const [correct, setCorrect] = useState(false);
 
-    const handleCorrectAnswer = (isCorrect) => {
-        if (isCorrect == true) {
-            setCorrect(true);
-            setClicked(true);
-        }
-        else {
-            setCorrect(false);
-            setClicked(true);
-        }
-    };
-
     const handleNextQuestion = () => {
         if (correct == true) {
             setClicked(false);
@@ -70,7 +59,10 @@ export default function QuizScreen({ navigation }) {
                             <TouchableOpacity
                                 style={clicked && answerOption.isCorrect ? Styles.correctButton : Styles.button}
                                 key={uuidv4()}
-                                onPress={handleCorrectAnswer}>
+                                onPress={
+                                    answerOption.isCorrect ? () => {setCorrect(true), setClicked(true)}
+                                    : ()=> {setCorrect(false), setClicked(true)}
+                                }>
                                 <Text style={Styles.text}>
                                     {answerOption.answer}
                                 </Text>
@@ -83,7 +75,8 @@ export default function QuizScreen({ navigation }) {
 
                     <TouchableOpacity
                         style={Styles.AnswerButton}
-                        onPress={handleNextQuestion}>
+                        onPress={handleNextQuestion}
+                        disabled={clicked ? false : true}>
                         <Text style={Styles.text}>
                             Next Question
                         </Text>
