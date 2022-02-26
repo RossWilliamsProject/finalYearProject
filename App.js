@@ -8,7 +8,8 @@ import SplashScreen from './Sceens/splashScreen';
 import HomeScreen from './Sceens/homeScreen';
 import QuizScreen from './Sceens/quizScreen';
 import SettingsScreen from './Sceens/settingsScreen';
-import ProfileScreen from './Sceens/profileScreen';
+import ProfileScreen from './Sceens/profileScreens/profileScreen';
+import ProfileNotFoundScreen from './Sceens/profileScreens/ProfileNotFoundScreen';
 import LeaderboardScreen from './Sceens/leaderboardScreen';
 import SubjectSelectionScreenSE from './Sceens/subjectSelectionScreens/subjectSelectionScreenSE';
 import SubjectSelectionOther from './Sceens/subjectSelectionScreens/subjectSelectionOther';
@@ -55,6 +56,9 @@ function MyTabs() {
           headerStyle: { backgroundColor: "#189AB4" },
           headerTitleStyle: { fontWeight: "bold", color: 'black' },
           tabBarLabel: '',
+          tabBarIcon: ({ color, size }) =>
+            <MaterialCommunityIcons name="trophy" color={color} size={size}
+              style={{ textAlignVertical: 'center' }} />
         }} />
 
       <Tab.Screen
@@ -126,7 +130,18 @@ export default function App() {
 
         <Stack.Screen options={{
           headerShown: true,
-          title:"Recap Quiz",
+          title: "Profile",
+          headerStyle: { backgroundColor: "#189AB4" },
+          headerTitleStyle: { fontWeight: "bold", color: "black" },
+        }}
+          name="ProfileNotFoundScreen"
+          component={ProfileNotFoundScreen}
+        />
+
+
+        <Stack.Screen options={{
+          headerShown: true,
+          title: "Recap Quiz",
           headerStyle: { backgroundColor: "#189AB4" },
           headerTitleStyle: { fontWeight: "bold", color: "black" },
         }}

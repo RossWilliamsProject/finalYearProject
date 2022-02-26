@@ -11,14 +11,18 @@ export default function QuizScreen({ navigation }) {
     const [correct, setCorrect] = useState(false);
 
     const handleCorrectAnswer = (isCorrect) => {
-        if (isCorrect) {
+        if (isCorrect == true) {
             setCorrect(true);
+            setClicked(true);
         }
-        setClicked(true);
+        else {
+            setCorrect(false);
+            setClicked(true);
+        }
     };
 
     const handleNextQuestion = () => {
-        if (correct) {
+        if (correct == true) {
             setClicked(false);
             setCorrect(false);
             if (currentQuestion < QuestionsList.length - 1) {

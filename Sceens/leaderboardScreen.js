@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-nati
 import { LeaderboardList } from "../AppData/AppDataLists/LeaderboardList";
 import { v4 as uuidv4 } from "uuid";
 
-export default function LeaderboardScreen() {
+export default function LeaderboardScreen({navigation}) {
   return (
     <ScrollView>
       <View style={Styles.view}>
@@ -13,6 +13,7 @@ export default function LeaderboardScreen() {
           {LeaderboardList.map((entry) => (
             <TouchableOpacity
               style={entry.user ? Styles.userButton : Styles.button}
+              onPress={entry.user ? () => navigation.navigate("profileScreen") : ()=> navigation.navigate("ProfileNotFoundScreen")}
               key={uuidv4()}>
               <Text style={Styles.text}>
                 {entry.displayName}

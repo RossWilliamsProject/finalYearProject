@@ -35,5 +35,32 @@ export const QuestionsList = [
         {answer: "fifteen", isCorrect: false},
       ]
     },
+    {
+      question: "what is 10 times 20",
+      answersList:[
+        {answer: "fifteen", isCorrect: false},
+        {answer: "200", isCorrect: true},
+        {answer: "fifteen", isCorrect: false},
+        {answer: "fifteen", isCorrect: false},
+      ]
+    },
+    {
+      question: "what is 10 times 20",
+      answersList:[
+        {answer: "fifteen", isCorrect: false},
+        {answer: "200", isCorrect: true},
+        {answer: "fifteen", isCorrect: false},
+        {answer: "fifteen", isCorrect: false},
+      ]
+    },
+    {
+      question: "what is 10 times 20",
+      answersList:[
+        {answer: "fifteen", isCorrect: false},
+        {answer: "200", isCorrect: true},
+        {answer: "fifteen", isCorrect: false},
+        {answer: "fifteen", isCorrect: false},
+      ]
+    },
   ];
   

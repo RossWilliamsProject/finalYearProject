@@ -4,7 +4,6 @@ import { MaterialCommunityIcons } from '@expo/vector-icons'
 import Icon from '@mdi/react'
 import { MdiAccount, MdiTrophy } from '@mdi/js'
 
-
 export default function HomeScreen({ navigation }) {
     return (
         
@@ -16,7 +15,7 @@ export default function HomeScreen({ navigation }) {
                     Profile
                 </Text>
                 <Text>   </Text>
-                <MaterialCommunityIcons name="" color="black" size={20} />
+                <MaterialCommunityIcons name="account" color="black" size={20} />
             </TouchableOpacity>
 
             <View style={Styles.space} />
@@ -28,7 +27,7 @@ export default function HomeScreen({ navigation }) {
                     Leaderboard
                 </Text>
                 <Text>   </Text>
-                <MaterialCommunityIcons name="" color="black" size={20} />
+                <MaterialCommunityIcons name="trophy" color="black" size={20} />
             </TouchableOpacity>
 
             <View style={Styles.space} />

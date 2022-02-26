@@ -1,52 +1,52 @@
 export const LeaderboardList = [
     {
-      "displayName": "Jone",
-      "score": 157000,
+      "displayName": "Harriet Smith",
+      "score": 2020,
       "user": false
     },
     {
-      "displayName": "Victoria",
-      "score": 46200,
+      "displayName": "John Thomas",
+      "score": 2010,
       "user": false
     },
     {
-      "displayName": "Joy",
-      "score": 38800,
+      "displayName": "Henry Windsor",
+      "score": 1900,
       "user": false
     },
     {
-      "displayName": "Quinn",
-      "score": 33400,
+      "displayName": "Jasmine George",
+      "score": 1840,
       "user": false
     },
     {
-      "displayName": "Sheenalo",
-      "score": 31600,
+      "displayName": "Alfie Johnson",
+      "score": 1780,
       "user": false
     },
     {
-      "displayName": "Charlene",
-      "score": 30800,
+      "displayName": "Max Miller",
+      "score": 1650,
       "user": true
     },
     {
-      "displayName": "LeonaBaby",
-      "score": 22300,
+      "displayName": "Adam Booth",
+      "score": 1600,
       "user": false
     },
     {
-      "displayName": "Sunny",
-      "score": 17800,
+      "displayName": "William Evans",
+      "score": 1400,
       "user": false
     },
     {
-      "displayName": "ImWord",
-      "score": 17300,
+      "displayName": "Christine Williams",
+      "score": 1200,
       "user": false
     },
     {
-      "displayName": "Dophine",
-      "score": 15400,
+      "displayName": "Anne Kerr",
+      "score": 400,
       "user": false
     }
   ]
