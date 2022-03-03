@@ -26,7 +26,7 @@ export const LeaderboardList = [
     },
     {
       "displayName": "Max Miller",
-      "score": 1650,
+      "score": 0,
       "user": true
     },
     {

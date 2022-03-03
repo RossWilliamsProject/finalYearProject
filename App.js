@@ -22,7 +22,7 @@ import { LeaderboardList } from './AppData/AppDataLists/LeaderboardList';
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
-function MyTabs() {
+function MyTabs({ sessionScore }) {
   return (
 
     <Tab.Navigator
@@ -58,8 +58,8 @@ function MyTabs() {
             <MaterialCommunityIcons name="trophy" color={color} size={size}
               style={{ textAlignVertical: 'center' }} />
         }}>
-          {props => <LeaderboardScreen {...props} sessionScore={sessionScore} />}
-        </Tab.Screen>
+        {props => <LeaderboardScreen {...props} sessionScore={sessionScore} />}
+      </Tab.Screen>
 
       <Tab.Screen
         name="home"
@@ -156,9 +156,8 @@ export default function App() {
           name="HomeTabs"
           screenOptions={{
             headerShown: false
-          }} 
-          >
-          {props => <MyTabs {...props} sessionScore={sessionScore} />}
+          }}>
+          {props => <MyTabs sessionScore={sessionScore} />}
         </Stack.Screen>
 
 

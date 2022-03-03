@@ -4,7 +4,7 @@ import { QuestionsList } from "../AppData/AppDataLists/QuestionsList";
 import { v4 as uuidv4 } from "uuid";
 import { useNavigation } from '@react-navigation/native';
 
-export default function QuizScreen({sessionScore, setSessionScore}) {
+export default function QuizScreen({ sessionScore, setSessionScore }) {
     const navigation = useNavigation();
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -13,31 +13,34 @@ export default function QuizScreen({sessionScore, setSessionScore}) {
     const [showScore, setShowScore] = useState(false);
     const [correct, setCorrect] = useState(false);
 
+    const handleUpdateScore = () => {
+        console.log("points awarded: " + Math.round(((score+1)/(QuestionsList.length))*100))
+        setSessionScore(sessionScore + Math.round(((score+1)/(QuestionsList.length))*100));
+    }
+
+
     const handleNextQuestion = () => {
         if (correct == true) {
             setClicked(false);
             setCorrect(false);
             if (currentQuestion < QuestionsList.length - 1) {
                 setCurrentQuestion(currentQuestion + 1);
-                setScore(score + 1);
             }
             else {
                 setScore(score + 1);
                 setShowScore(true);
-                setSessionScore(sessionScore + (Math.round(score / QuestionsList.length * 100)));
-                console.log("set session score: " + sessionScore)
+                handleUpdateScore();
             }
+            setScore(score + 1);
         }
         else {
             setClicked(false);
-            setCorrect(false);
             if (currentQuestion < QuestionsList.length - 1) {
                 setCurrentQuestion(currentQuestion + 1);
             }
             else {
                 setShowScore(true);
-                setSessionScore(Math.round(score / QuestionsList.length * 100));
-                console.log("set session score: " + sessionScore)
+                handleUpdateScore();
             }
         }
     };
@@ -94,7 +97,7 @@ export default function QuizScreen({sessionScore, setSessionScore}) {
 
                     <TouchableOpacity
                         style={Styles.scoreOpacity}
-                        onPress={() => {navigation.navigate("SubjectSelectionSE")}}>
+                        onPress={() => { navigation.navigate("SubjectSelectionSE") }}>
                         <Text style={Styles.textBold}>
                             Return to Course
                         </Text>
