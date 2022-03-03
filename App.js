@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { View, Text, TouchableOpacity, StyleSheet, ImageBackground } from 'react-native';
@@ -17,8 +17,7 @@ import CourseSelectionScreen from './Sceens/courseSelectionScreen';
 import SEIntroduction from './Sceens/subjectScreens/SEIntroduction';
 import SERequirements from './Sceens/subjectScreens/SERequiremts';
 import OSubjectNotFound from './Sceens/subjectScreens/OSubjectNotFound';
-import Icon from '@mdi/react'
-import { mdiTrophy } from '@mdi/js'
+import { LeaderboardList } from './AppData/AppDataLists/LeaderboardList';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -44,7 +43,6 @@ function MyTabs() {
 
       <Tab.Screen
         name="leaderboard"
-        component={LeaderboardScreen}
         options={{
           title: "CompleteEducation",
           headerRight: () => (
@@ -59,7 +57,9 @@ function MyTabs() {
           tabBarIcon: ({ color, size }) =>
             <MaterialCommunityIcons name="trophy" color={color} size={size}
               style={{ textAlignVertical: 'center' }} />
-        }} />
+        }}>
+          {props => <LeaderboardScreen {...props} sessionScore={sessionScore} />}
+        </Tab.Screen>
 
       <Tab.Screen
         name="home"
@@ -104,6 +104,8 @@ function MyTabs() {
 }
 
 export default function App() {
+  const [sessionScore, setSessionScore] = useState(0);
+
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName=""
@@ -146,15 +148,18 @@ export default function App() {
           headerTitleStyle: { fontWeight: "bold", color: "black" },
         }}
           name="quizScreen"
-          component={QuizScreen}
-        />
+        >
+          {props => <QuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore} />}
+        </Stack.Screen>
 
         <Stack.Screen
           name="HomeTabs"
-          component={MyTabs}
           screenOptions={{
             headerShown: false
-          }} />
+          }} 
+          >
+          {props => <MyTabs {...props} sessionScore={sessionScore} />}
+        </Stack.Screen>
 
 
 

@@ -2,24 +2,27 @@ import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { LeaderboardList } from "../AppData/AppDataLists/LeaderboardList";
 import { v4 as uuidv4 } from "uuid";
+import { useNavigation } from '@react-navigation/native';
 
-export default function LeaderboardScreen({navigation}) {
+export default function LeaderboardScreen({sessionScore}) {
+  const navigation = useNavigation();
+
   return (
     <ScrollView>
       <View style={Styles.view}>
         <Text style={Styles.textBold}>LeaderBoard</Text>
         <Text style={Styles.text}>Your Score is Highlighted in Blue</Text>
         <View>
-          {LeaderboardList.map((entry) => (
+          {LeaderboardList.sort(OrderValues).map((entry) => (
             <TouchableOpacity
               style={entry.user ? Styles.userButton : Styles.button}
-              onPress={entry.user ? () => navigation.navigate("profileScreen") : ()=> navigation.navigate("ProfileNotFoundScreen")}
+              onPress={entry.user ? () => {navigation.navigate("profileScreen"), console.log(sessionScore)} : () => navigation.navigate("ProfileNotFoundScreen")}
               key={uuidv4()}>
               <Text style={Styles.text}>
                 {entry.displayName}
               </Text>
               <Text style={Styles.scoreText}>
-                Score: {entry.score}
+                Score: {entry.user ? sessionScore : entry.score}
               </Text>
             </TouchableOpacity>
           ))}
@@ -27,6 +30,17 @@ export default function LeaderboardScreen({navigation}) {
       </View>
     </ScrollView>
   )
+}
+
+
+function OrderValues(a, b) {
+  if (a.score > b.score) {
+    return -1;
+  }
+  if (a.score < b.score) {
+    return 1;
+  }
+  return 0;
 }
 
 const Styles = StyleSheet.create({
@@ -63,7 +77,7 @@ const Styles = StyleSheet.create({
   },
   textBold: {
     color: 'black',
-    fontWeight: 'bold',
+    fontWeight: 'bold',
     fontSize: 20
   },
   scoreText: {
