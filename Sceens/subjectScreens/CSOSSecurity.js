@@ -2,7 +2,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, contentContainer} from 'react-native';
 
-export default function SEIntroduction () {
+export default function CSOSSecurity () {
   return(    
     <View style={styles.backgroundview}>
         <ScrollView 

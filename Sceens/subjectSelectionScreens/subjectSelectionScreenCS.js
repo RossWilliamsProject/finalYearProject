@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity} from 'react-native';
 
-export default function SubjectSelectionScreen ({navigation}) {
+export default function subjectSelectionScreenCS ({navigation}) {
     return(    
     <View style={styles.view}>
         <ScrollView>
@@ -15,9 +15,9 @@ export default function SubjectSelectionScreen ({navigation}) {
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate("SEIntroduction")}>
+                onPress={()=>navigation.navigate("CSFoundations")}>
                 <Text style={styles.text}>
-                    Introduction   
+                    Foundations   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -26,9 +26,9 @@ export default function SubjectSelectionScreen ({navigation}) {
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate("SERequirements")}>
+                onPress={()=>navigation.navigate("CSSecurityManagement")}>
                 <Text style={styles.text}>
-                    Requirements   
+                    Security Management   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -37,9 +37,9 @@ export default function SubjectSelectionScreen ({navigation}) {
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate("OSubjectNotFound")}>
+                onPress={()=>navigation.navigate("CSCryptography")}>
                 <Text style={styles.text}>
-                    Requirements Gathering   
+                    Cryptography   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -48,9 +48,9 @@ export default function SubjectSelectionScreen ({navigation}) {
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate("OSubjectNotFound")}>
+                onPress={()=>navigation.navigate("CSAuthentication")}>
                 <Text style={styles.text}>
-                    Requirements Modelling   
+                    Authentication   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -58,9 +58,9 @@ export default function SubjectSelectionScreen ({navigation}) {
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate("OSubjectNotFound")}>
+                onPress={()=>navigation.navigate("CSKernelSecurity")}>
                 <Text style={styles.text}>
-                    Specifiction   
+                    Kernel Security   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -68,9 +68,9 @@ export default function SubjectSelectionScreen ({navigation}) {
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate("OSubjectNotFound")}>
+                onPress={()=>navigation.navigate("CSOSSecurity")}>
                 <Text style={styles.text}>
-                    Prototyping   
+                    OS Security   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -78,9 +78,9 @@ export default function SubjectSelectionScreen ({navigation}) {
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate("OSubjectNotFound")}>
+                onPress={()=>navigation.navigate("CSMalware")}>
                 <Text style={styles.text}>
-                    Test Plans   
+                    Malware   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
@@ -88,35 +88,14 @@ export default function SubjectSelectionScreen ({navigation}) {
 
         <TouchableOpacity 
                 style={styles.button} 
-                onPress={()=>navigation.navigate("OSubjectNotFound")}>
+                onPress={()=>navigation.navigate("CSExploits")}>
                 <Text style={styles.text}>
-                    Implementation   
+                    Exploits   
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
         <View style={styles.space} />
 
-        <TouchableOpacity 
-                style={styles.button} 
-                onPress={()=>navigation.navigate("OSubjectNotFound")}>
-                <Text style={styles.text}>
-                    CI Deployment   
-                </Text>
-                <Text>   </Text>
-        </TouchableOpacity>
-        <View style={styles.space} />
-
-        <TouchableOpacity 
-                style={styles.button} 
-                onPress={()=>navigation.navigate("OSubjectNotFound")}>
-                <Text style={styles.text}>
-                    Test Driven Development   
-                </Text>
-                <Text>   </Text>
-        </TouchableOpacity>
-
-
-        <View style={styles.space} />
         </View>
         </ScrollView>
     </View>
