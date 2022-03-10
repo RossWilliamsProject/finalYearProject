@@ -1,127 +1,118 @@
 
-import React from 'react';
-import { View, Text, StyleSheet, ScrollView, contentContainer} from 'react-native';
+import React from 'react';
+import { View, Text, StyleSheet, ScrollView, contentContainer } from 'react-native';
 
-export default function CSSecurityManagement () {
-  return(    
+export default function CSSecurityManagement() {
+  return (
     <View style={styles.backgroundview}>
-        <ScrollView 
-        contentContainerStyle = {styles.contentContainer}>
+      <ScrollView
+        contentContainerStyle={styles.contentContainer}>
         <View style={styles.view}>
-
-        <Text style={styles.textHeader}>
-        Introduction
-        </Text>
-
-        <Text style={styles.boldtext}>Summary of Content:</Text>
-        <Text style={styles.text}> 
-           You’ll be introduced to the concept of{"\n"} Software
-                Engineering and will be taken{"\n"} through the software development{"\n"} process:{"\n"}{"\n"}
-              - deciding exactly what should be built {"\n"} (Requirements),{"\n"}
-              - designing how it should be built {"\n"}  (Software Specification/Architecture),{"\n"}
-              - development strategies {"\n"}(Implementation & Testing){"\n"}
-              - maintaining change{"\n"} (Software Evolution and Maintenance).{"\n"}{"\n"}
+          <Text style={styles.textHeader}>
+            Security management
           </Text>
-
-
-        <Text style={styles.boldtext}>What exactly is Software?</Text>
-        <Text style={styles.text}> 
-          There are many examples:{"\n"}{"\n"}
-          A Phone Game App: {"\n"}
-          • Ready for real users{"\n"}
-          • Integrates many features in the game.{"\n"}
-          • Might integrate with other services {"\n"}(e.g. login){"\n"}
-          • Might have a server component{"\n"}
-          - talking to a database{"\n"}
-          • Need to push out multiple versions{"\n"}{"\n"}
-          A Social Media Platform: {"\n"}
-          • Basically a server driven platform{"\n"}
-          • Has lots of interfaces to it{"\n"}
-          {'   '}- each is a piece of software{"\n"}
-          {'   '}- each one integrates functions{"\n"}
-          {'   '}- each piece might have diff bugs{"\n"}
-          • New features rolled out across them{"\n"}{"\n"}
-          A Web Browser: {"\n"}
-          • Integrates multiple functions{"\n"}
-          • Has a version history on every platform{"\n"}
-          • New functions roll out on all platforms{"\n"}
-          • All authenticate and share data{"\n"}{"\n"}
-
-          Overall, Software includes{"\n"}
-          {'   '}- the compiled code{"\n"}
-          {'   '}- documentation{"\n"}
-          {'   '}- configuration components{"\n"}
-          {'   '}- installation/upgrade{"\n"}
-          {'   '}- All in an installer that ‘deploys’{"\n"}
+          <Text style={styles.boldtext}>
+            Defintions
           </Text>
-
-          <Text style={styles.boldtext}>Software Engineering Definition</Text>
-          <Text style={styles.text}> 
-          “The application of a systematic, disciplined,
-            quantifiable approach to the development,
-            operation, and maintenance of software;{"\n"}
-            that is, the application of engineering to software” {"\n"}
+          <Text style={styles.text}>
+            Information security: preservation of confidentiality
+            , integrity and availability of information.{"\n"}
+            In addition, other properties such as authenticity,
+            accountability, non-repudiation and reliability can also be involved.{"\n"}
+            Cyber security's core function is to protect the devices
+            we all use (smartphones, laptops, tablets and computers),
+            and the services we access - both online and at work - from theft or damage.{"\n"}
+            How does cybersecurity differ from other terms such as information security,
+            IT security, computer security etc.? Short answer: it doesn’t … unless you’re being pedantic!{"\n"}{"\n"}
           </Text>
-
-          <Text style={styles.boldtext}>The Software Crisis</Text>
-          <Text style={styles.text}>Nato, 1968</Text>
-          <Text style={styles.text}> 
-          • Software was bad, or worse{"\n"}
-          {'   '}- Individual-person approaches{"\n"}
-          {'   '} to SE didn't scale to software{"\n"}
-          • Software was unreliable, behind schedule,
-          {' '}and cost more than expected{"\n"}
-          • ‘Software Engineering’ was coined{"\n"}
-           to understand the ‘making’ of software
-          • During the 1970s/80s (and still now) people develop new processes to
-          better ‘engineer’ software.
+          <Text style={styles.boldtext}>
+            Security Policy
+          </Text>
+          <Text style={styles.text}>
+            A statement of overall intent and commitment to security.{"\n"}
+            Provides a foundation for other aspects.{"\n"}
+            High level policy applies to the organisation and everyone in it,
+            more focused policies may apply to specific departments, systems, etc.{"\n"}
+            Characteristics of good Security Policy Include:{"\n"}
+            -	Is short & backed from the top of the organisation{"\n"}
+            -	Recognises that information is critical & must be protected{"\n"}
+            -	Emphasises the importance of security awareness & training{"\n"}
+            -	Emphasises compliance with legal & regulatory requirements{"\n"}
+            -	Emphasises relations with third parties{"\n"}
+            -	States roles and responsibilities for information security{"\n"}
+            -	Outlines standards and procedures § States the consequences of violations and non-compliance{"\n"}{"\n"}
+          </Text>
+          <Text style={styles.boldtext}>
+            Risk recognition
+          </Text>
+          <Text style={styles.text}>
+            Risk recognition can be organised into “4 R’s”{"\n"}
+            -	Removal: System is modified so that a particular feature, and the associated risk, is removed.{"\n"}
+            -	Reduction: Security measures are used to reduce risk to an acceptable level{"\n"}
+            -	Retention: Nothing is done - the risk is small and insignificant{"\n"}
+            -	Relocation: The system is unchanged, but the risk is transferred to another party (e.g. via an insurance policy){"\n"}{"\n"}
+          </Text>
+          <Text style={styles.boldtext}>
+            Risk Analysis
+          </Text>
+          <Text style={styles.text}>
+            The purpose of risk analysis is the identification,
+            examination & evaluation of risks within an information system.{"\n"}
+            This involves using risk component parts to determine estimates
+            of future events, collecting evidence, and aggregating estimates
+            to establish appropriate protection.{"\n"}{"\n"}
+            Baseline security is a minimum level of protection that should
+            be considered by all organisations utilising IT systems.{"\n"}
+            This is dictated by standards – common standards include:{"\n"}
+            -	UK Government’s 10 Steps to Cyber Security and Cyber Essentials scheme{"\n"}
+            -	ISO/IEC 27002 standard - “A code of practice for information security controls”{"\n"}
           </Text>
         </View>
-        </ScrollView>
-    </View>
-    
-    );
+      </ScrollView >
+    </View >
+
+  );
 }
 
 
 const styles = StyleSheet.create({
-    view: { 
-        flex:0,
-        //alignItems:'center',
-        width: "93%",
-        borderRadius:20,
-        backgroundColor: "white"
-    },
-    textHeader: {
-        color: 'black',
-        paddingLeft: 10,
-        paddingTop: 10,
-        fontWeight: 'bold',
-        fontSize: 30
-    },
-    text: {
-      paddingLeft: 15,
-      fontSize: 20
-    },
-    boldtext: {
-      fontWeight:'bold',
-      paddingLeft: 10,
-      fontSize: 20
-    },
-    checkbox: {
-        alignSelf: "center",
-    },
-    space: {
-        width: 20,
-        height: 10,
-    }, 
-    contentContainer: {
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#D9E3E5',
-      paddingBottom: 10,
-      paddingTop: 20,
-      width: '100%',
+  view: {
+    flex: 0,
+    //alignItems:'center',
+    width: "93%",
+    borderRadius: 20,
+    backgroundColor: "white"
+  },
+  textHeader: {
+    color: 'black',
+    paddingLeft: 10,
+    paddingTop: 10,
+    fontWeight: 'bold',
+    fontSize: 30
+  },
+  text: {
+    paddingLeft: 15,
+    fontSize: 20
+  },
+  boldtext: {
+    fontWeight: 'bold',
+    paddingLeft: 10,
+    fontSize: 20
+  },
+  checkbox: {
+    alignSelf: "center",
+  },
+  space: {
+    width: 20,
+    height: 10,
+  },
+  contentContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#D9E3E5',
+    paddingBottom: 10,
+    paddingTop: 20,
+    width: '100%',
 
-    }
+  }
 })

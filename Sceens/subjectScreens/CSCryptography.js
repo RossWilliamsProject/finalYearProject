@@ -1,127 +1,135 @@
 
-import React from 'react';
-import { View, Text, StyleSheet, ScrollView, contentContainer} from 'react-native';
+import React from 'react';
+import { View, Text, StyleSheet, ScrollView, contentContainer } from 'react-native';
 
-export default function CSCryptography () {
-  return(    
+export default function CSCryptography() {
+  return (
     <View style={styles.backgroundview}>
-        <ScrollView 
-        contentContainerStyle = {styles.contentContainer}>
+      <ScrollView
+        contentContainerStyle={styles.contentContainer}>
         <View style={styles.view}>
-
-        <Text style={styles.textHeader}>
-        Introduction
-        </Text>
-
-        <Text style={styles.boldtext}>Summary of Content:</Text>
-        <Text style={styles.text}> 
-           You’ll be introduced to the concept of{"\n"} Software
-                Engineering and will be taken{"\n"} through the software development{"\n"} process:{"\n"}{"\n"}
-              - deciding exactly what should be built {"\n"} (Requirements),{"\n"}
-              - designing how it should be built {"\n"}  (Software Specification/Architecture),{"\n"}
-              - development strategies {"\n"}(Implementation & Testing){"\n"}
-              - maintaining change{"\n"} (Software Evolution and Maintenance).{"\n"}{"\n"}
+          <Text style={styles.textHeader}>
+            Cryptography
           </Text>
 
-
-        <Text style={styles.boldtext}>What exactly is Software?</Text>
-        <Text style={styles.text}> 
-          There are many examples:{"\n"}{"\n"}
-          A Phone Game App: {"\n"}
-          • Ready for real users{"\n"}
-          • Integrates many features in the game.{"\n"}
-          • Might integrate with other services {"\n"}(e.g. login){"\n"}
-          • Might have a server component{"\n"}
-          - talking to a database{"\n"}
-          • Need to push out multiple versions{"\n"}{"\n"}
-          A Social Media Platform: {"\n"}
-          • Basically a server driven platform{"\n"}
-          • Has lots of interfaces to it{"\n"}
-          {'   '}- each is a piece of software{"\n"}
-          {'   '}- each one integrates functions{"\n"}
-          {'   '}- each piece might have diff bugs{"\n"}
-          • New features rolled out across them{"\n"}{"\n"}
-          A Web Browser: {"\n"}
-          • Integrates multiple functions{"\n"}
-          • Has a version history on every platform{"\n"}
-          • New functions roll out on all platforms{"\n"}
-          • All authenticate and share data{"\n"}{"\n"}
-
-          Overall, Software includes{"\n"}
-          {'   '}- the compiled code{"\n"}
-          {'   '}- documentation{"\n"}
-          {'   '}- configuration components{"\n"}
-          {'   '}- installation/upgrade{"\n"}
-          {'   '}- All in an installer that ‘deploys’{"\n"}
+          <Text style={styles.boldtext}>
+            Symmetric Cryptography
           </Text>
-
-          <Text style={styles.boldtext}>Software Engineering Definition</Text>
-          <Text style={styles.text}> 
-          “The application of a systematic, disciplined,
-            quantifiable approach to the development,
-            operation, and maintenance of software;{"\n"}
-            that is, the application of engineering to software” {"\n"}
+          <Text style={styles.text}>
+            Symmetric encryption gives us confidentiality.{"\n"}
+            Usually implemented using block ciphers or stream ciphers.{"\n"}{"\n"}
           </Text>
+          <Text style={styles.boldtext}>
+            Stream Ciphers
+          </Text>
+          <Text style={styles.text}>
+            Stream ciphers use an initial seed key to generate
+            an infinite keystream of random looking bits.{"\n"}
+            The message and keystream are usually combined using XOR
+            - ⊕ - which is reversible if applied twice.{"\n"}
+            Advantages of Stream Ciphers{"\n"}
+            -	Encrypting long continuous streams, possibly of unknown length{"\n"}
+            -	Extremely fast with a low memory footprint, ideal for low-power devices{"\n"}
+            -	If designed well, can seek to any location in the stream{"\n"}
+            Disadvantages of Stream Ciphers{"\n"}
+            -	The keystream must appear statistically random{"\n"}
+            -	You must never reuse a key + nonce{"\n"}
+            -	Steam ciphers do not protect the cipher text{"\n"}{"\n"}
 
-          <Text style={styles.boldtext}>The Software Crisis</Text>
-          <Text style={styles.text}>Nato, 1968</Text>
-          <Text style={styles.text}> 
-          • Software was bad, or worse{"\n"}
-          {'   '}- Individual-person approaches{"\n"}
-          {'   '} to SE didn't scale to software{"\n"}
-          • Software was unreliable, behind schedule,
-          {' '}and cost more than expected{"\n"}
-          • ‘Software Engineering’ was coined{"\n"}
-           to understand the ‘making’ of software
-          • During the 1970s/80s (and still now) people develop new processes to
-          better ‘engineer’ software.
+          </Text>
+          <Text style={styles.boldtext}>
+            Block Ciphers
+          </Text>
+          <Text style={styles.text}>
+            Block ciphers use a key to encrypt a fixed-size block
+            of plaintext into a fixed-size block of ciphertext by changing
+            and permuting the bits of the block depending on the key.{"\n"}
+            Different lengths of messages can be handled by splitting
+            the message up, and adding padding.{"\n"}{"\n"}
+
+          </Text>
+          <Text style={styles.boldtext}>
+            Cryptographic Attack Models
+          </Text>
+          <Text style={styles.text}>
+            (from weakest to strongest attack){"\n"}
+            1.	Brute-force{"\n"}
+            2.	Ciphertext-only{"\n"}
+            3.	Known-plaintext{"\n"}
+            4.	Chosen-plaintext{"\n"}
+            5.	Chosen-ciphertext{"\n"}
+            6.	Related-key attack{"\n"}
+          </Text>
+          <Text style={styles.boldtext}>
+            Public-key Cryptography
+          </Text>
+          <Text style={styles.text}>
+            Public-key Cryptography involves the use of two keys,
+            a public key and a private key.{"\n"}
+            Public-key (asymmetric) cryptography hinges
+            upon the premise that it is computationally infeasible
+            to calculate a private from a public key.{"\n"}{"\n"}
+          </Text>
+          <Text style={styles.boldtext}>
+            Hash Functions
+          </Text>
+          <Text style={styles.text}>
+            Another cryptographic primitive in our toolbox.{"\n"}
+            A hash function takes a message of any length,
+            and returns a pseudorandom hash of fixed length.{"\n"}
+            Strong hash functions should: appear random,
+            hard to find collisions (two messages that hash to the same thing).{"\n"}
+            Hash functions are used for:{"\n"}
+            -	Digital Signatures{"\n"}
+            -	Password storage{"\n"}
+
           </Text>
         </View>
-        </ScrollView>
+      </ScrollView>
     </View>
-    
-    );
+
+  );
 }
 
 
 const styles = StyleSheet.create({
-    view: { 
-        flex:0,
-        //alignItems:'center',
-        width: "93%",
-        borderRadius:20,
-        backgroundColor: "white"
-    },
-    textHeader: {
-        color: 'black',
-        paddingLeft: 10,
-        paddingTop: 10,
-        fontWeight: 'bold',
-        fontSize: 30
-    },
-    text: {
-      paddingLeft: 15,
-      fontSize: 20
-    },
-    boldtext: {
-      fontWeight:'bold',
-      paddingLeft: 10,
-      fontSize: 20
-    },
-    checkbox: {
-        alignSelf: "center",
-    },
-    space: {
-        width: 20,
-        height: 10,
-    }, 
-    contentContainer: {
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#D9E3E5',
-      paddingBottom: 10,
-      paddingTop: 20,
-      width: '100%',
+  view: {
+    flex: 0,
+    //alignItems:'center',
+    width: "93%",
+    borderRadius: 20,
+    backgroundColor: "white"
+  },
+  textHeader: {
+    color: 'black',
+    paddingLeft: 10,
+    paddingTop: 10,
+    fontWeight: 'bold',
+    fontSize: 30
+  },
+  text: {
+    paddingLeft: 15,
+    fontSize: 20
+  },
+  boldtext: {
+    fontWeight: 'bold',
+    paddingLeft: 10,
+    fontSize: 20
+  },
+  checkbox: {
+    alignSelf: "center",
+  },
+  space: {
+    width: 20,
+    height: 10,
+  },
+  contentContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#D9E3E5',
+    paddingBottom: 10,
+    paddingTop: 20,
+    width: '100%',
 
-    }
+  }
 })
