@@ -11,12 +11,20 @@ import SettingsScreen from './Sceens/settingsScreen';
 import ProfileScreen from './Sceens/profileScreens/profileScreen';
 import ProfileNotFoundScreen from './Sceens/profileScreens/ProfileNotFoundScreen';
 import LeaderboardScreen from './Sceens/leaderboardScreen';
-import SubjectSelectionScreenSE from './Sceens/subjectSelectionScreens/subjectSelectionScreenSE';
+import SubjectSelectionScreenCS from './Sceens/subjectSelectionScreens/subjectSelectionScreenCS';
 import SubjectSelectionOther from './Sceens/subjectSelectionScreens/subjectSelectionOther';
 import CourseSelectionScreen from './Sceens/courseSelectionScreen';
-import SEIntroduction from './Sceens/subjectScreens/SEIntroduction';
-import SERequirements from './Sceens/subjectScreens/SERequiremts';
+
 import OSubjectNotFound from './Sceens/subjectScreens/OSubjectNotFound';
+import CSAuthentication from './Sceens/subjectScreens/CSAuthentication';
+import CSCryptography from './Sceens/subjectScreens/CSCryptography';
+import CSExploits from './Sceens/subjectScreens/CSExploits';
+import CSFoundations from './Sceens/subjectScreens/CSFoundations';
+import CSKernelSecurity from './Sceens/subjectScreens/CSKernelSecurity';
+import CSMalware from './Sceens/subjectScreens/CSMalware';
+import CSOSSecurity from './Sceens/subjectScreens/CSOSSecurity';
+import CSSecurityManagement from './Sceens/subjectScreens/CSSecurityManagement';
+
 import { LeaderboardList } from './AppData/AppDataLists/LeaderboardList';
 
 const Tab = createBottomTabNavigator();
@@ -162,11 +170,13 @@ export default function App() {
 
 
 
+        
+
         {/*LIST OF COURSES*/}
-        <Stack.Screen name="SubjectSelectionSE" component={SubjectSelectionScreenSE}
+        <Stack.Screen name="SubjectSelectionCS" component={SubjectSelectionScreenCS}
           options={{
             headerShown: true,
-            title: "Software Engineering",
+            title: "Computer Security",
             headerStyle: { backgroundColor: "#189AB4" },
             headerTitleStyle: { fontWeight: "bold", color: "black" },
           }} />
@@ -179,22 +189,63 @@ export default function App() {
           }} />
 
 
-        {/*LIST OF SOFTWARE ENGINEERING SUBJECTS*/}
-        <Stack.Screen name="SEIntroduction" component={SEIntroduction}
+        {/*LIST OF COMPUTER SECURITY SUBJECTS*/}
+        <Stack.Screen name="CSFoundations" component={CSFoundations}
           options={{
             headerShown: true,
-            title: "Introduction",
+            title: "Foundations",
             headerStyle: { backgroundColor: "#189AB4" },
             headerTitleStyle: { fontWeight: "bold", color: "black" },
           }} />
-        <Stack.Screen name="SERequirements" component={SERequirements}
+        <Stack.Screen name="CSSecurityManagement" component={CSSecurityManagement}
           options={{
             headerShown: true,
-            title: "Requirements",
+            title: "Security Management",
             headerStyle: { backgroundColor: "#189AB4" },
             headerTitleStyle: { fontWeight: "bold", color: "black" },
           }} />
-
+        <Stack.Screen name="CSCryptography" component={CSCryptography}
+          options={{
+            headerShown: true,
+            title: "Cryptraphy",
+            headerStyle: { backgroundColor: "#189AB4" },
+            headerTitleStyle: { fontWeight: "bold", color: "black" },
+          }} />
+        <Stack.Screen name="CSAuthentication" component={CSAuthentication}
+          options={{
+            headerShown: true,
+            title: "Authentication",
+            headerStyle: { backgroundColor: "#189AB4" },
+            headerTitleStyle: { fontWeight: "bold", color: "black" },
+          }} />
+        <Stack.Screen name="CSKernelSecurity" component={CSKernelSecurity}
+          options={{
+            headerShown: true,
+            title: "Kernel Security",
+            headerStyle: { backgroundColor: "#189AB4" },
+            headerTitleStyle: { fontWeight: "bold", color: "black" },
+          }} />
+        <Stack.Screen name="CSOSSecurity" component={CSOSSecurity}
+          options={{
+            headerShown: true,
+            title: "OS Security",
+            headerStyle: { backgroundColor: "#189AB4" },
+            headerTitleStyle: { fontWeight: "bold", color: "black" },
+          }} />
+        <Stack.Screen name="CSMalware" component={CSMalware}
+          options={{
+            headerShown: true,
+            title: "Malware",
+            headerStyle: { backgroundColor: "#189AB4" },
+            headerTitleStyle: { fontWeight: "bold", color: "black" },
+          }} />
+        <Stack.Screen name="CSExploits" component={CSExploits}
+          options={{
+            headerShown: true,
+            title: "Exploits",
+            headerStyle: { backgroundColor: "#189AB4" },
+            headerTitleStyle: { fontWeight: "bold", color: "black" },
+          }} />
 
         <Stack.Screen name="OSubjectNotFound" component={OSubjectNotFound}
           options={{
