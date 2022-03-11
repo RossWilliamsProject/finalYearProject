@@ -93,7 +93,7 @@ export default function CSKernelSecurity() {
         <View style={styles.space} />
         <TouchableOpacity
           style={styles.button}
-          onPress={() => Navigation.navigate("quizScreen")}>
+          onPress={() => Navigation.navigate("CSKernelSecurityQuizScreen")}>
           <Text style={styles.text}>
             Recap Quiz
           </Text>

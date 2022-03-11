@@ -6,11 +6,12 @@ import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import SplashScreen from './Sceens/splashScreen';
 import HomeScreen from './Sceens/homeScreen';
-import QuizScreen from './Sceens/quizScreen';
+import AuthenticaionQuizScreen from './Sceens/quizScreens/CSAuthenticationQuizScreen';
 import SettingsScreen from './Sceens/settingsScreen';
 import ProfileScreen from './Sceens/profileScreens/profileScreen';
 import ProfileNotFoundScreen from './Sceens/profileScreens/ProfileNotFoundScreen';
 import LeaderboardScreen from './Sceens/leaderboardScreen';
+
 import SubjectSelectionScreenCS from './Sceens/subjectSelectionScreens/subjectSelectionScreenCS';
 import SubjectSelectionOther from './Sceens/subjectSelectionScreens/subjectSelectionOther';
 import CourseSelectionScreen from './Sceens/courseSelectionScreen';
@@ -24,6 +25,15 @@ import CSKernelSecurity from './Sceens/subjectScreens/CSKernelSecurity';
 import CSMalware from './Sceens/subjectScreens/CSMalware';
 import CSOSSecurity from './Sceens/subjectScreens/CSOSSecurity';
 import CSSecurityManagement from './Sceens/subjectScreens/CSSecurityManagement';
+
+import CSAuthenticationQuizScreen from './Sceens/quizScreens/CSAuthenticationQuizScreen';
+import CSCryptographyQuizScreen from './Sceens/quizScreens/CSCryptographyQuizScreen';
+import CSExploitsQuizScreen from './Sceens/quizScreens/CSExploitsQuizScreen';
+import CSFoundationsQuizScreen from './Sceens/quizScreens/CSFoundationsQuizScreen';
+import CSKernelSecurityQuizScreen from './Sceens/quizScreens/CSKernelSecurityQuizScreen';
+import CSMalwareQuizScreen from './Sceens/quizScreens/CSMalwareQuizScreen';
+import CSOSSecurityQuizScreen from './Sceens/quizScreens/CSOSSecurityQuizScreen';
+import CSSecurityManagementQuizScreen from './Sceens/quizScreens/CSSecurityManagementQuizScreen';
 
 import { LeaderboardList } from './AppData/AppDataLists/LeaderboardList';
 
@@ -149,16 +159,96 @@ export default function App() {
         />
 
 
+
+        {/*LIST OF QUIZZES*/}
         <Stack.Screen options={{
           headerShown: true,
-          title: "Recap Quiz",
+          title: "Authenticaion Quiz",
           headerStyle: { backgroundColor: "#189AB4" },
           headerTitleStyle: { fontWeight: "bold", color: "black" },
         }}
-          name="quizScreen"
+          name="CSAuthenticationQuizScreen"
         >
-          {props => <QuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore} />}
+          {props => <CSAuthenticationQuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore} />}
         </Stack.Screen>
+
+        <Stack.Screen options={{
+          headerShown: true,
+          title: "Cryptography Quiz",
+          headerStyle: { backgroundColor: "#189AB4" },
+          headerTitleStyle: { fontWeight: "bold", color: "black" },
+        }}
+          name="CSCryptographyQuizScreen"
+        >
+          {props => <CSCryptographyQuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore} />}
+        </Stack.Screen>
+
+        <Stack.Screen options={{
+          headerShown: true,
+          title: "Exploits Quiz",
+          headerStyle: { backgroundColor: "#189AB4" },
+          headerTitleStyle: { fontWeight: "bold", color: "black" },
+        }}
+          name="CSExploitsQuizScreen"
+        >
+          {props => <CSExploitsQuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore} />}
+        </Stack.Screen>
+
+        <Stack.Screen options={{
+          headerShown: true,
+          title: "Foundations Quiz",
+          headerStyle: { backgroundColor: "#189AB4" },
+          headerTitleStyle: { fontWeight: "bold", color: "black" },
+        }}
+          name="CSFoundationsQuizScreen"
+        >
+          {props => <CSFoundationsQuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore} />}
+        </Stack.Screen>
+
+        <Stack.Screen options={{
+          headerShown: true,
+          title: "Kernel Security Quiz",
+          headerStyle: { backgroundColor: "#189AB4" },
+          headerTitleStyle: { fontWeight: "bold", color: "black" },
+        }}
+          name="CSKernelSecurityQuizScreen"
+        >
+          {props => <CSKernelSecurityQuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore} />}
+        </Stack.Screen>
+
+        <Stack.Screen options={{
+          headerShown: true,
+          title: "Malwre Quiz",
+          headerStyle: { backgroundColor: "#189AB4" },
+          headerTitleStyle: { fontWeight: "bold", color: "black" },
+        }}
+          name="CSMalwareQuizScreen"
+        >
+          {props => <CSMalwareQuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore} />}
+        </Stack.Screen>
+
+        <Stack.Screen options={{
+          headerShown: true,
+          title: "OS Security Quiz",
+          headerStyle: { backgroundColor: "#189AB4" },
+          headerTitleStyle: { fontWeight: "bold", color: "black" },
+        }}
+          name="CSOSSecurityQuizScreen"
+        >
+          {props => <CSOSSecurityQuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore} />}
+        </Stack.Screen>
+
+        <Stack.Screen options={{
+          headerShown: true,
+          title: "Security Management Quiz",
+          headerStyle: { backgroundColor: "#189AB4" },
+          headerTitleStyle: { fontWeight: "bold", color: "black" },
+        }}
+          name="CSSecurityManagementQuizScreen"
+        >
+          {props => <CSSecurityManagementQuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore} />}
+        </Stack.Screen>
+
 
         <Stack.Screen
           name="HomeTabs"
@@ -170,7 +260,7 @@ export default function App() {
 
 
 
-        
+
 
         {/*LIST OF COURSES*/}
         <Stack.Screen name="SubjectSelectionCS" component={SubjectSelectionScreenCS}
@@ -207,7 +297,7 @@ export default function App() {
         <Stack.Screen name="CSCryptography" component={CSCryptography}
           options={{
             headerShown: true,
-            title: "Cryptraphy",
+            title: "Cryptography",
             headerStyle: { backgroundColor: "#189AB4" },
             headerTitleStyle: { fontWeight: "bold", color: "black" },
           }} />

@@ -95,7 +95,7 @@ export default function CSOSSecurity() {
         <View style={styles.space} />
         <TouchableOpacity
           style={styles.button}
-          onPress={() => Navigation.navigate("quizScreen")}>
+          onPress={() => Navigation.navigate("CSOSSecurityQuizScreen")}>
           <Text style={styles.text}>
             Recap Quiz
           </Text>

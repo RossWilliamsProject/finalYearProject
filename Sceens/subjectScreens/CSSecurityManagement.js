@@ -76,7 +76,7 @@ export default function CSSecurityManagement() {
         <View style={styles.space} />
         <TouchableOpacity
           style={styles.button}
-          onPress={() => Navigation.navigate("quizScreen")}>
+          onPress={() => Navigation.navigate("CSSecurityManagementQuizScreen")}>
           <Text style={styles.text}>
             Recap Quiz
           </Text>

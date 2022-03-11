@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { QuestionsList } from "../AppData/AppDataLists/QuestionsList";
+import { QuestionsList } from "../../AppData/AppDataLists/CSAuthenticationQuestionsList";
 import { v4 as uuidv4 } from "uuid";
 import { useNavigation } from '@react-navigation/native';
 
-export default function QuizScreen({ sessionScore, setSessionScore }) {
+export default function CSOSSecurityQuizScreen({ sessionScore, setSessionScore }) {
     const navigation = useNavigation();
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -97,7 +97,7 @@ export default function QuizScreen({ sessionScore, setSessionScore }) {
 
                     <TouchableOpacity
                         style={Styles.scoreOpacity}
-                        onPress={() => { navigation.navigate("SubjectSelectionSE") }}>
+                        onPress={() => { navigation.navigate("SubjectSelectionCS") }}>
                         <Text style={Styles.textBold}>
                             Return to Course
                         </Text>

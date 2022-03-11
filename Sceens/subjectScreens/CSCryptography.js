@@ -93,7 +93,7 @@ export default function CSCryptography() {
         <View style={styles.space} />
         <TouchableOpacity
           style={styles.button}
-          onPress={() => Navigation.navigate("quizScreen")}>
+          onPress={() => Navigation.navigate("CSCryptographyQuizScreen")}>
           <Text style={styles.text}>
             Recap Quiz
           </Text>
