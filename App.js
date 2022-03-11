@@ -113,7 +113,7 @@ export default function App() {
         <Stack.Screen name="SubjectSelectionCS" component={SubjectSelectionScreenCS}
           options={{
             headerShown: true,
-            title: "Software Engineering",
+            title: "Computer Security",
             headerStyle: { backgroundColor: "#189AB4" },
             headerTitleStyle: { fontWeight: "bold", color: "black" },
           }} />
