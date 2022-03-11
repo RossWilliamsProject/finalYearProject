@@ -1,8 +1,12 @@
 
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, contentContainer } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, contentContainer, TouchableOpacity } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons'
+import { useNavigation } from '@react-navigation/native';
 
 export default function CSAuthentication() {
+  const Navigation = useNavigation();
+
   return (
     <View style={styles.backgroundview}>
       <ScrollView
@@ -85,18 +89,18 @@ export default function CSAuthentication() {
             related to other accounts will stay secure).{"\n"}
             The salt is stored unencrypted with the hash for decryption.{"\n"}
           </Text>
-          <View style={styles.space} />
-          <View style={styles.space} />
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => Navigation.navigate("quizScreen")}>
-            <Text style={styles.text}>
-              Recap Quiz
-            </Text>
-            <Text>   </Text>
-            <MaterialCommunityIcons name="history" color="black" size={20} />
-          </TouchableOpacity>
         </View>
+        <View style={styles.space} />
+        <View style={styles.space} />
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => Navigation.navigate("quizScreen")}>
+          <Text style={styles.text}>
+            Recap Quiz
+          </Text>
+          <Text>   </Text>
+          <MaterialCommunityIcons name="history" color="black" size={20} />
+        </TouchableOpacity>
       </ScrollView >
     </View >
 
@@ -134,6 +138,17 @@ const styles = StyleSheet.create({
   space: {
     width: 20,
     height: 10,
+  },
+  button: {
+    backgroundColor: 'white',
+    width: 375,
+    height: 60,
+    justifyContent: 'space-between',
+    padding: 10,
+    alignItems: 'center',
+    borderRadius: 20,
+    flexDirection: 'row',
+    marginVertical: 5,
   },
   contentContainer: {
     justifyContent: 'center',

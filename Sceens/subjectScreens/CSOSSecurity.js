@@ -1,8 +1,12 @@
 
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, contentContainer } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, contentContainer, TouchableOpacity } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons'
+import { useNavigation } from '@react-navigation/native';
 
 export default function CSOSSecurity() {
+  const Navigation = useNavigation();
+
   return (
     <View style={styles.backgroundview}>
       <ScrollView
@@ -86,20 +90,20 @@ export default function CSOSSecurity() {
             It allows the OS to identify the user, the user’s groups,
             and the user’s privileges for future reference.{"\n"}
           </Text>
-          <View style={styles.space} />
-          <View style={styles.space} />
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => Navigation.navigate("quizScreen")}>
-            <Text style={styles.text}>
-              Recap Quiz
-            </Text>
-            <Text>   </Text>
-            <MaterialCommunityIcons name="history" color="black" size={20} />
-          </TouchableOpacity>
         </View>
-      </ScrollView>
-    </View>
+        <View style={styles.space} />
+        <View style={styles.space} />
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => Navigation.navigate("quizScreen")}>
+          <Text style={styles.text}>
+            Recap Quiz
+          </Text>
+          <Text>   </Text>
+          <MaterialCommunityIcons name="history" color="black" size={20} />
+        </TouchableOpacity>
+      </ScrollView >
+    </View >
 
   );
 }
@@ -112,6 +116,17 @@ const styles = StyleSheet.create({
     width: "93%",
     borderRadius: 20,
     backgroundColor: "white"
+  },
+  button: {
+    backgroundColor: 'white',
+    width: 375,
+    height: 60,
+    justifyContent: 'space-between',
+    padding: 10,
+    alignItems: 'center',
+    borderRadius: 20,
+    flexDirection: 'row',
+    marginVertical: 5,
   },
   textHeader: {
     color: 'black',

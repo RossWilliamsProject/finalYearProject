@@ -1,8 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, ImageBackground } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons'
-import Icon from '@mdi/react'
-import { MdiAccount, MdiTrophy } from '@mdi/js'
 
 export default function HomeScreen({ navigation }) {
     return (

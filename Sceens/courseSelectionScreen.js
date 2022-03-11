@@ -13,9 +13,9 @@ export default function CourseSelectionScreen ({navigation}) {
 
         <TouchableOpacity 
                 style={Styles.button} 
-                onPress={()=>navigation.navigate('SubjectSelectionSE')}>
+                onPress={()=>navigation.navigate('SubjectSelectionCS')}>
                 <Text style={Styles.text}>
-                    Software Engineering 
+                    Computer Security 
                 </Text>
                 <Text>   </Text>
         </TouchableOpacity>
