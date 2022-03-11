@@ -65,7 +65,7 @@ export const QuestionsList = [
   {
     question: "“Minimum level of protection that should be considered by all organisations utilising IT systems” fits which word best? ",
     answersList: [
-      { answer: "Baseline Analysis  ", isCorrect: false },
+      { answer: "Baseline Analysis  ", isCorrect: true },
       { answer: "Low Risk Security ", isCorrect: false },
       { answer: "Baseline Security ", isCorrect: false },
       { answer: "Minimal Security ", isCorrect: false },
@@ -77,7 +77,7 @@ export const QuestionsList = [
       { answer: "Cyber security involves no accountability ", isCorrect: false },
       { answer: "Hardware differences ", isCorrect: false },
       { answer: "Both of the above ", isCorrect: false },
-      { answer: "None of the above  ", isCorrect: false },
+      { answer: "None of the above  ", isCorrect: true },
     ]
   },
 ];

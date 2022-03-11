@@ -64,7 +64,7 @@ export const QuestionsList = [
   {
     question: "What word fits the following definition: “The prevention of unauthorised users reading private or secret information”? ",
     answersList: [
-      { answer: "Confidentiality  ", isCorrect: false },
+      { answer: "Confidentiality  ", isCorrect: true },
       { answer: "Accountability ", isCorrect: false },
       { answer: "Non-repudiation ", isCorrect: false },
       { answer: "Detection ", isCorrect: false },

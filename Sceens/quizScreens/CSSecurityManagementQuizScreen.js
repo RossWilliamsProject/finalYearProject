@@ -207,8 +207,7 @@ const Styles = StyleSheet.create({
     },
     text: {
         color: 'black',
-        fontWeight: 'bold',
-        fontSize: 20
+        fontSize: 15
     },
     AnswerButton: {
         backgroundColor: 'grey',
