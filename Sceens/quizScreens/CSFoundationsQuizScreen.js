@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { QuestionsList } from "../../AppData/AppDataLists/CSAuthenticationQuestionsList";
+import { QuestionsList } from "../../AppData/AppDataLists/CSFoundationsQuestionsList";
 import { v4 as uuidv4 } from "uuid";
 import { useNavigation } from '@react-navigation/native';
 

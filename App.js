@@ -6,7 +6,6 @@ import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import SplashScreen from './Sceens/splashScreen';
 import HomeScreen from './Sceens/homeScreen';
-import AuthenticaionQuizScreen from './Sceens/quizScreens/CSAuthenticationQuizScreen';
 import SettingsScreen from './Sceens/settingsScreen';
 import ProfileScreen from './Sceens/profileScreens/profileScreen';
 import ProfileNotFoundScreen from './Sceens/profileScreens/ProfileNotFoundScreen';
