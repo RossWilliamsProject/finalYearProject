@@ -1,23 +1,30 @@
 
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, Dimensions, StyleSheet, Image, ScrollView } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import { useNavigation } from '@react-navigation/native';
 
 export default function CSAuthentication() {
+  const navigation = useNavigation();
+
   const [showPreStory, setShowPreStory] = useState(true);
+  const [showPostStory, setShowPostStory] = useState(false);
 
   return (
-    <View style={styles.view}>
+    <View style={styles.container}>
       {showPreStory ? (
-        <View style={styles.container}>
+        <>
+          <View style={styles.header}>
+            <Image source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/waves.png')} />
+          </View>
 
           <Animatable.View style={styles.footer} animation="fadeInUpBig">
             <Text style={styles.title}>
-              Welcome to CompleteEducation!
+              Pre Story Narrative
             </Text>
             <View style={styles.view}>
-              <TouchableOpacity style={styles.button} onPress={() => setShowPreStory(true)}>
+              <TouchableOpacity style={styles.button} onPress={() => setShowPreStory(false)}>
                 <Text style={styles.buttontext}>
                   Start Learning!
                 </Text>
@@ -25,101 +32,123 @@ export default function CSAuthentication() {
               </TouchableOpacity>
             </View>
           </Animatable.View>
-
-        </View>
+        </>
       ) : (
-        <View style={styles.backgroundview}>
-          <ScrollView
-            contentContainerStyle={styles.contentContainer}>
-            <View style={styles.view}>
-              <Text style={styles.textHeader}>
-                Authentication
-              </Text>
-              <Text style={styles.boldtext}>
-                Accessing Assets
-              </Text>
-              <Text style={styles.text}>
-                To allow some access to an asset we must ensure:{"\n"}
-                1.	They are permitted to access that asset{"\n"}
-                2.	They are who they say they are{"\n"}
-                We can attempt to verify identity using credentials{"\n"}
-                •	Something the user is{"\n"}
-                •	Something the user has{"\n"}
-                •	Something the user knows{"\n"}{"\n"}
-              </Text>
+        <View style={styles.container}>
+          {!showPostStory ? (
+            <View style={styles.backgroundview}>
+              <ScrollView
+                contentContainerStyle={styles.contentContainer}>
+                <View style={styles.Learningview}>
+                  <Text style={styles.textHeader}>
+                    Authentication
+                  </Text>
+                  <Text style={styles.boldtext}>
+                    Accessing Assets
+                  </Text>
+                  <Text style={styles.text}>
+                    To allow some access to an asset we must ensure:{"\n"}
+                    1.	They are permitted to access that asset{"\n"}
+                    2.	They are who they say they are{"\n"}
+                    We can attempt to verify identity using credentials{"\n"}
+                    •	Something the user is{"\n"}
+                    •	Something the user has{"\n"}
+                    •	Something the user knows{"\n"}{"\n"}
+                  </Text>
 
-              <Text style={styles.boldtext}>
-                Passwords
-              </Text>
-              <Text style={styles.text}>
-                Problems with Passwords{"\n"}
-                1.	People forget them{"\n"}
-                2.	They can be guessed{"\n"}
-                3.	Spoofing and Phishing{"\n"}
-                4.	Compromised password files{"\n"}
-                5.	Keylogging{"\n"}{"\n"}
-              </Text>
+                  <Text style={styles.boldtext}>
+                    Passwords
+                  </Text>
+                  <Text style={styles.text}>
+                    Problems with Passwords{"\n"}
+                    1.	People forget them{"\n"}
+                    2.	They can be guessed{"\n"}
+                    3.	Spoofing and Phishing{"\n"}
+                    4.	Compromised password files{"\n"}
+                    5.	Keylogging{"\n"}{"\n"}
+                  </Text>
 
-              <Text style={styles.boldtext}>
-                Storing Passwords
-              </Text>
-              <Text style={styles.text}>
-                Storing passwords in plain text is a terrible idea as you
-                might be hacked, and administrators can read them.{"\n"}
-                Storing encrypted passwords is better,
-                but not perfect as there are issues such as where the keys
-                are stored, and the fact that administrators can still read them.{"\n"}
-                Operating systems have taken steps to stop people
-                reading hashes for offline attacks:{"\n"}
-                -	Linux stores hashes in a shadow file /etc/shadow{"\n"}
-                -	Windows stores this in ..\system32\config\SAM{"\n"}
-                -	These files are now read protected{"\n"}{"\n"}
+                  <Text style={styles.boldtext}>
+                    Storing Passwords
+                  </Text>
+                  <Text style={styles.text}>
+                    Storing passwords in plain text is a terrible idea as you
+                    might be hacked, and administrators can read them.{"\n"}
+                    Storing encrypted passwords is better,
+                    but not perfect as there are issues such as where the keys
+                    are stored, and the fact that administrators can still read them.{"\n"}
+                    Operating systems have taken steps to stop people
+                    reading hashes for offline attacks:{"\n"}
+                    -	Linux stores hashes in a shadow file /etc/shadow{"\n"}
+                    -	Windows stores this in ..\system32\config\SAM{"\n"}
+                    -	These files are now read protected{"\n"}{"\n"}
 
-              </Text>
+                  </Text>
 
-              <Text style={styles.boldtext}>
-                Password Cracking
-              </Text>
-              <Text style={styles.text}>
-                Password cracking falls into two basic types:{"\n"}
-                •	Offline: You have a copy of the password hash locally{"\n"}
-                •	Online: You do not have the hash,{"\n"}
-                and are instead attempting to gain access to an actual login terminal{"\n"}{"\n"}
-              </Text>
+                  <Text style={styles.boldtext}>
+                    Password Cracking
+                  </Text>
+                  <Text style={styles.text}>
+                    Password cracking falls into two basic types:{"\n"}
+                    •	Offline: You have a copy of the password hash locally{"\n"}
+                    •	Online: You do not have the hash,{"\n"}
+                    and are instead attempting to gain access to an actual login terminal{"\n"}{"\n"}
+                  </Text>
 
-              <Text style={styles.boldtext}>
-                Offline Cracking Methods
-              </Text>
-              <Text style={styles.text}>
-                Brute force approach: Difficulty is calculated as 𝑐ℎ𝑎𝑟_𝑐𝑜𝑢𝑛𝑡^length,
-                GPUs are fast, but not fast enough for long passwords.{"\n"}
-                Dictionary attacks: Using a dictionary of common words and passwords,
-                applying small variations to this list, trying them all
-                (including combining words from two different lists).{"\n"}{"\n"}
-              </Text>
+                  <Text style={styles.boldtext}>
+                    Offline Cracking Methods
+                  </Text>
+                  <Text style={styles.text}>
+                    Brute force approach: Difficulty is calculated as 𝑐ℎ𝑎𝑟_𝑐𝑜𝑢𝑛𝑡^length,
+                    GPUs are fast, but not fast enough for long passwords.{"\n"}
+                    Dictionary attacks: Using a dictionary of common words and passwords,
+                    applying small variations to this list, trying them all
+                    (including combining words from two different lists).{"\n"}{"\n"}
+                  </Text>
 
-              <Text style={styles.boldtext}>
-                Password Salting
-              </Text>
-              <Text style={styles.text}>
-                Password Salting is adding a series of random characters to the
-                start of a password before hashing.{"\n"}
-                This will massively alter the password
-                (meaning that if one password is cracked, the same password
-                related to other accounts will stay secure).{"\n"}
-                The salt is stored unencrypted with the hash for decryption.{"\n"}
-              </Text>
-            </View>
-            <TouchableOpacity
-              style={styles.scoreOpacity}
-              onPress={() => setShowPreStory(false)}>
-              <Text style={styles.textBold}>
-                Finish Learning!
-              </Text>
-            </TouchableOpacity>
-          </ScrollView >
-        </View >
+                  <Text style={styles.boldtext}>
+                    Password Salting
+                  </Text>
+                  <Text style={styles.text}>
+                    Password Salting is adding a series of random characters to the
+                    start of a password before hashing.{"\n"}
+                    This will massively alter the password
+                    (meaning that if one password is cracked, the same password
+                    related to other accounts will stay secure).{"\n"}
+                    The salt is stored unencrypted with the hash for decryption.{"\n"}
+                  </Text>
+                </View>
+                <TouchableOpacity
+                  style={styles.scoreOpacity}
+                  onPress={() => setShowPostStory(true)}>
+                  <Text style={styles.textBold}>
+                    Finish Learning!
+                  </Text>
+                </TouchableOpacity>
+              </ScrollView >
+            </View >
+          ) : (
+            <>
+              <View style={styles.header}>
+                <Image source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/waves.png')} />
+              </View>
 
+              <Animatable.View style={styles.footer} animation="fadeInUpBig">
+                <Text style={styles.title}>
+                  Post Story Narrative
+                </Text>
+                <View style={styles.view}>
+                  <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('SubjectSelectionCS')}>
+                    <Text style={styles.buttontext}>
+                      Return to Course
+                    </Text>
+                    <MaterialIcons name="navigate-next" color="black" size={20} />
+                  </TouchableOpacity>
+                </View>
+              </Animatable.View>
+            </>
+          )}
+        </View>
       )}
     </View>
   )
@@ -127,11 +156,14 @@ export default function CSAuthentication() {
 
 
 const styles = StyleSheet.create({
-  view: {
-    flex: 0,
-    width: "93%",
-    borderRadius: 20,
-    backgroundColor: "white"
+  container: {
+    flex: 1,
+    backgroundColor: "#D9E3E5"
+  },
+  header: {
+    flex: 2,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   textHeader: {
     color: 'black',
@@ -140,20 +172,43 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 30
   },
-  scoreOpacity: {
-    backgroundColor: 'white',
-    width: 375,
-    height: 60,
-    justifyContent: 'space-between',
-    padding: 10,
-    alignItems: 'center',
+  footer: {
+    flex: 1,
+    backgroundColor: '#05445E',
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    paddingVertical: 30,
+    paddingHorizontal: 30
+  },
+  title: {
+    color: 'white',
+    fontSize: 30,
+    fontWeight: 'bold'
+  },
+  view: {
+    alignItems: 'flex-end',
+    marginTop: 30
+  },
+  Learningview: {
+    flex: 0,
+    //alignItems:'center',
+    width: "93%",
     borderRadius: 20,
-    flexDirection: 'row',
-    marginVertical: 5,
-    alignSelf: 'center',
-    alignItems: 'center',
+    backgroundColor: "white"
+  },
+  button: {
+    backgroundColor: 'white',
+    width: 150,
+    height: 40,
     justifyContent: 'center',
-},
+    alignItems: 'center',
+    borderRadius: 50,
+    flexDirection: 'row'
+  },
+  buttontext: {
+    color: '#333333',
+    fontWeight: 'bold'
+  },
   text: {
     paddingLeft: 15,
     fontSize: 20
@@ -170,11 +225,6 @@ const styles = StyleSheet.create({
     width: 20,
     height: 10,
   },
-  textBold: {
-    color: 'black',
-    fontWeight: 'bold',
-    fontSize: 20
-},
   contentContainer: {
     justifyContent: 'center',
     alignItems: 'center',
@@ -182,5 +232,19 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     paddingTop: 20,
     width: '100%',
-  }
-})
+  },
+  scoreOpacity: {
+    backgroundColor: 'white',
+    width: 375,
+    height: 60,
+    justifyContent: 'space-between',
+    padding: 10,
+    alignItems: 'center',
+    borderRadius: 20,
+    flexDirection: 'row',
+    marginVertical: 5,
+    alignSelf: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});

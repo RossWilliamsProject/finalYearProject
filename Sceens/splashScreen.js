@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Dimensions, StyleSheet, StatusBar,Image} from 'react-native';
+import { View, Text, TouchableOpacity, Dimensions, StyleSheet, Image} from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
@@ -28,9 +28,6 @@ export default function SplashScreen ({navigation}) {
     );
 };
 
-const {height} = Dimensions.get("screen");
-const height_logo = height * 0.3;
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -48,10 +45,6 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 30,
         paddingVertical: 30,
         paddingHorizontal: 30
-    },
-    logo: {
-        width: height_logo,
-        height: height_logo
     },
     title: {
         color: 'white',
