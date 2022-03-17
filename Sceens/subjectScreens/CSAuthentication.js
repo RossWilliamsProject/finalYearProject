@@ -24,8 +24,8 @@ export default function CSAuthentication() {
               Pre Story Narrative
             </Text>
             <View style={styles.view}>
-              <TouchableOpacity style={styles.button} onPress={() => setShowPreStory(false)}>
-                <Text style={styles.buttontext}>
+              <TouchableOpacity style={styles.scoreOpacity} onPress={() => setShowPreStory(false)}>
+                <Text style={styles.boldtext}>
                   Start Learning!
                 </Text>
                 <MaterialIcons name="navigate-next" color="black" size={20} />
@@ -121,7 +121,7 @@ export default function CSAuthentication() {
                 <TouchableOpacity
                   style={styles.scoreOpacity}
                   onPress={() => setShowPostStory(true)}>
-                  <Text style={styles.textBold}>
+                  <Text style={styles.boldtext}>
                     Finish Learning!
                   </Text>
                 </TouchableOpacity>
@@ -138,8 +138,8 @@ export default function CSAuthentication() {
                   Post Story Narrative
                 </Text>
                 <View style={styles.view}>
-                  <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('SubjectSelectionCS')}>
-                    <Text style={styles.buttontext}>
+                  <TouchableOpacity style={styles.scoreOpacity} onPress={() => navigation.navigate('SubjectSelectionCS')}>
+                    <Text style={styles.boldtext}>
                       Return to Course
                     </Text>
                     <MaterialIcons name="navigate-next" color="black" size={20} />
@@ -195,19 +195,6 @@ const styles = StyleSheet.create({
     width: "93%",
     borderRadius: 20,
     backgroundColor: "white"
-  },
-  button: {
-    backgroundColor: 'white',
-    width: 150,
-    height: 40,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 50,
-    flexDirection: 'row'
-  },
-  buttontext: {
-    color: '#333333',
-    fontWeight: 'bold'
   },
   text: {
     paddingLeft: 15,
