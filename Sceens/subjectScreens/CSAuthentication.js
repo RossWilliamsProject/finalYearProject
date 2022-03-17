@@ -1,8 +1,8 @@
 
-import React from 'react';
-import { View, Text, StyleSheet, ScrollView,Image, useState } from 'react-native';
-import * as Animatable from 'react-native-animatable';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import * as Animatable from 'react-native-animatable';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 export default function CSAuthentication() {
   const [showPreStory, setShowPreStory] = useState(true);
@@ -12,16 +12,15 @@ export default function CSAuthentication() {
       {showPreStory ? (
         <View style={styles.container}>
 
-          <View style={styles.header}>
-          </View>
-
           <Animatable.View style={styles.footer} animation="fadeInUpBig">
             <Text style={styles.title}>
               Welcome to CompleteEducation!
             </Text>
             <View style={styles.view}>
-              <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('HomeTabs')}>
-                <Text style={styles.buttontext}>Start Learning!</Text>
+              <TouchableOpacity style={styles.button} onPress={() => setShowPreStory(true)}>
+                <Text style={styles.buttontext}>
+                  Start Learning!
+                </Text>
                 <MaterialIcons name="navigate-next" color="black" size={20} />
               </TouchableOpacity>
             </View>
@@ -112,17 +111,16 @@ export default function CSAuthentication() {
               </Text>
             </View>
             <TouchableOpacity
-                        style={styles.scoreOpacity}
-                        onPress={() => setShowPreStory(false)}>
-                        <Text style={styles.textBold}>
-                            Finish Learning!
-                        </Text>
-                    </TouchableOpacity>
+              style={styles.scoreOpacity}
+              onPress={() => setShowPreStory(false)}>
+              <Text style={styles.textBold}>
+                Finish Learning!
+              </Text>
+            </TouchableOpacity>
           </ScrollView >
         </View >
 
-      )
-      };
+      )}
     </View>
   )
 }
@@ -131,7 +129,6 @@ export default function CSAuthentication() {
 const styles = StyleSheet.create({
   view: {
     flex: 0,
-    //alignItems:'center',
     width: "93%",
     borderRadius: 20,
     backgroundColor: "white"
@@ -143,6 +140,20 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 30
   },
+  scoreOpacity: {
+    backgroundColor: 'white',
+    width: 375,
+    height: 60,
+    justifyContent: 'space-between',
+    padding: 10,
+    alignItems: 'center',
+    borderRadius: 20,
+    flexDirection: 'row',
+    marginVertical: 5,
+    alignSelf: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+},
   text: {
     paddingLeft: 15,
     fontSize: 20
@@ -159,6 +170,11 @@ const styles = StyleSheet.create({
     width: 20,
     height: 10,
   },
+  textBold: {
+    color: 'black',
+    fontWeight: 'bold',
+    fontSize: 20
+},
   contentContainer: {
     justifyContent: 'center',
     alignItems: 'center',
@@ -166,6 +182,5 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     paddingTop: 20,
     width: '100%',
-
   }
 })
