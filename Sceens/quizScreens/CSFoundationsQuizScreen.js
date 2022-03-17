@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { QuestionsList } from "../../AppData/AppDataLists/CSFoundationsQuestionsList";
 import { v4 as uuidv4 } from "uuid";
 import { useNavigation } from '@react-navigation/native';
 
-export default function CSFoundationsQuizScreen({ sessionScore, setSessionScore }) {
+export default function CSFoundationsQuizScreen({ sessionScore, setSessionScore, setShowBadge01, showBadge01 }) {
     const navigation = useNavigation();
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -14,8 +14,8 @@ export default function CSFoundationsQuizScreen({ sessionScore, setSessionScore 
     const [correct, setCorrect] = useState(false);
 
     const handleUpdateScore = () => {
-        console.log("points awarded: " + Math.round(((score+1)/(QuestionsList.length))*100))
-        setSessionScore(sessionScore + Math.round(((score+1)/(QuestionsList.length))*100));
+        console.log("points awarded: " + Math.round(((score + 1) / (QuestionsList.length)) * 100))
+        setSessionScore(sessionScore + Math.round(((score + 1) / (QuestionsList.length)) * 100));
     }
 
 
@@ -87,17 +87,24 @@ export default function CSFoundationsQuizScreen({ sessionScore, setSessionScore 
 
                     <TouchableOpacity
                         style={Styles.scoreOpacity}
-                        onPress={() => navigation.navigate("leaderboard")}>
+                        onPress={() => { setShowBadge01(true), navigation.navigate("leaderboard") }}>
                         <Text style={Styles.textBold}>
                             View Leaderboard
                         </Text>
+
+                        <View>
+                            <Image
+                                source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/awardTemp.png')}
+                            />
+                        </View>
+
                     </TouchableOpacity>
 
                     <View style={Styles.space} />
 
                     <TouchableOpacity
                         style={Styles.scoreOpacity}
-                        onPress={() => { navigation.navigate("SubjectSelectionCS") }}>
+                        onPress={() => { setShowBadge01(true), navigation.navigate("SubjectSelectionCS") }}>
                         <Text style={Styles.textBold}>
                             Return to Course
                         </Text>

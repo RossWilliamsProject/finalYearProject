@@ -122,6 +122,7 @@ function MyTabs({ sessionScore }) {
 
 export default function App() {
   const [sessionScore, setSessionScore] = useState(0);
+  const [showBadge01, setShowBadge01] = useState(false);
 
   return (
     <NavigationContainer>
@@ -144,8 +145,10 @@ export default function App() {
           headerTitleStyle: { fontWeight: "bold", color: "black" },
         }}
           name="profileScreen"
-          component={ProfileScreen}
-        />
+        >
+          {props => <ProfileScreen {...props} setShowBadge01={setShowBadge01} showBadge01={showBadge01} />}
+
+        </Stack.Screen>
 
         <Stack.Screen options={{
           headerShown: true,
@@ -168,7 +171,8 @@ export default function App() {
         }}
           name="CSAuthenticationQuizScreen"
         >
-          {props => <CSAuthenticationQuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore} />}
+          {props => <CSAuthenticationQuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore}
+            showBadge01={showBadge01} />}
         </Stack.Screen>
 
         <Stack.Screen options={{
@@ -179,7 +183,8 @@ export default function App() {
         }}
           name="CSCryptographyQuizScreen"
         >
-          {props => <CSCryptographyQuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore} />}
+          {props => <CSCryptographyQuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore}
+            showBadge01={showBadge01} />}
         </Stack.Screen>
 
         <Stack.Screen options={{
@@ -190,7 +195,8 @@ export default function App() {
         }}
           name="CSExploitsQuizScreen"
         >
-          {props => <CSExploitsQuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore} />}
+          {props => <CSExploitsQuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore}
+            showBadge01={showBadge01} />}
         </Stack.Screen>
 
         <Stack.Screen options={{
@@ -201,7 +207,8 @@ export default function App() {
         }}
           name="CSFoundationsQuizScreen"
         >
-          {props => <CSFoundationsQuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore} />}
+          {props => <CSFoundationsQuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore}
+            setShowBadge01={setShowBadge01} showBadge01={showBadge01} />}
         </Stack.Screen>
 
         <Stack.Screen options={{
@@ -212,7 +219,8 @@ export default function App() {
         }}
           name="CSKernelSecurityQuizScreen"
         >
-          {props => <CSKernelSecurityQuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore} />}
+          {props => <CSKernelSecurityQuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore}
+            showBadge01={showBadge01} />}
         </Stack.Screen>
 
         <Stack.Screen options={{
@@ -223,7 +231,8 @@ export default function App() {
         }}
           name="CSMalwareQuizScreen"
         >
-          {props => <CSMalwareQuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore} />}
+          {props => <CSMalwareQuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore}
+            showBadge01={showBadge01} />}
         </Stack.Screen>
 
         <Stack.Screen options={{
@@ -234,7 +243,8 @@ export default function App() {
         }}
           name="CSOSSecurityQuizScreen"
         >
-          {props => <CSOSSecurityQuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore} />}
+          {props => <CSOSSecurityQuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore}
+            showBadge01={showBadge01} />}
         </Stack.Screen>
 
         <Stack.Screen options={{
@@ -245,7 +255,8 @@ export default function App() {
         }}
           name="CSSecurityManagementQuizScreen"
         >
-          {props => <CSSecurityManagementQuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore} />}
+          {props => <CSSecurityManagementQuizScreen {...props} setSessionScore={setSessionScore} sessionScore={sessionScore}
+            showBadge01={showBadge01} />}
         </Stack.Screen>
 
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
-export default function ProfileScreen({ navigation }) {
+export default function ProfileScreen({ setShowBadge01, showBadge01, na  }) {
   return (
     <View style={Styles.view}>
       <View style={Styles.space} />
@@ -28,6 +28,14 @@ export default function ProfileScreen({ navigation }) {
         <Text style={Styles.textBold}>
           Badges:
         </Text>
+        {showBadge01 ?
+          <View>
+            <Image
+              source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/awardTemp.png')}
+            />
+          </View>
+          : <></>
+        }
       </TouchableOpacity>
 
       <View style={Styles.space} />
@@ -50,7 +58,7 @@ export default function ProfileScreen({ navigation }) {
       </TouchableOpacity>
 
       <View style={Styles.space} />
-      
+
       <TouchableOpacity
         style={Styles.button}
         onPress={() => navigation.navigate("home")}>
@@ -58,7 +66,7 @@ export default function ProfileScreen({ navigation }) {
           Home
         </Text>
       </TouchableOpacity>
-    </View>
+    </View >
   )
 }
 

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { QuestionsList } from "../../AppData/AppDataLists/CSOSSecurityQuestionsList";
 import { v4 as uuidv4 } from "uuid";
 import { useNavigation } from '@react-navigation/native';
 
-export default function CSOSSecurityQuizScreen({ sessionScore, setSessionScore }) {
+export default function CSOSSecurityQuizScreen({ sessionScore, setSessionScore, showBadge01 }) {
     const navigation = useNavigation();
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -14,8 +14,8 @@ export default function CSOSSecurityQuizScreen({ sessionScore, setSessionScore }
     const [correct, setCorrect] = useState(false);
 
     const handleUpdateScore = () => {
-        console.log("points awarded: " + Math.round(((score+1)/(QuestionsList.length))*100))
-        setSessionScore(sessionScore + Math.round(((score+1)/(QuestionsList.length))*100));
+        console.log("points awarded: " + Math.round(((score + 1) / (QuestionsList.length)) * 100))
+        setSessionScore(sessionScore + Math.round(((score + 1) / (QuestionsList.length)) * 100));
     }
 
 
@@ -81,6 +81,14 @@ export default function CSOSSecurityQuizScreen({ sessionScore, setSessionScore }
                         <Text style={Styles.textBold}>
                             Badges:
                         </Text>
+                        {showBadge01 ?
+                            <View>
+                                <Image
+                                    source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/awardTemp.png')}
+                                />
+                            </View>
+                            : <></>
+                        }
                     </TouchableOpacity>
 
                     <View style={Styles.space} />
