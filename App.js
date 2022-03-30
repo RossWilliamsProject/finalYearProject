@@ -151,7 +151,7 @@ export default function App() {
         <Stack.Screen name="CSAuthentication" component={CSAuthentication}
           options={{
             headerShown: true,
-            title: "Authentication",
+            title: "Foudations",
             headerStyle: { backgroundColor: "#189AB4" },
             headerTitleStyle: { fontWeight: "bold", color: "black" },
           }} />

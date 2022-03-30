@@ -21,7 +21,7 @@ export default function CSAuthentication() {
 
           <Animatable.View style={styles.footer} animation="fadeInUpBig">
             <Text style={styles.text}>
-              Pre Story Narrative
+              Chapter 1: Part 1
             </Text>
             <View style={styles.characterImage}>
               <Image source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/scientistHappy2.png')} />
