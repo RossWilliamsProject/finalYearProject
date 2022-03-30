@@ -20,18 +20,30 @@ export default function CSAuthentication() {
           </View>
 
           <Animatable.View style={styles.footer} animation="fadeInUpBig">
-            <Text style={styles.title}>
+            <Text style={styles.text}>
               Pre Story Narrative
             </Text>
-            <View style={styles.view}>
-              <TouchableOpacity style={styles.scoreOpacity} onPress={() => setShowPreStory(false)}>
+            <View style={styles.characterImage}>
+              <Image source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/scientistHappy2.png')} />
+            </View>
+
+              <View style={styles.learningOpacity} disabled={true}>
+                <Text style={styles.text}>
+                  Hey there! My name is Molly and I just started a job on board the HMS Trent,
+                a submarine! My job is to manage the ships cyber security,
+                and I’m going to need your help. Join me as I brush up on my security
+                knowledge along this adventure!
+                </Text>
+                <MaterialIcons name="navigate-next" color="black" size={20} />
+              </View>
+              <TouchableOpacity style={styles.advanceOpacity} onPress={() => setShowPreStory(false)}>
                 <Text style={styles.boldtext}>
                   Start Learning!
                 </Text>
                 <MaterialIcons name="navigate-next" color="black" size={20} />
               </TouchableOpacity>
-            </View>
           </Animatable.View>
+          
         </>
       ) : (
         <View style={styles.container}>
@@ -161,9 +173,12 @@ const styles = StyleSheet.create({
     backgroundColor: "#D9E3E5"
   },
   header: {
-    flex: 2,
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  characterImage: {
+
   },
   textHeader: {
     color: 'black',
@@ -173,12 +188,12 @@ const styles = StyleSheet.create({
     fontSize: 30
   },
   footer: {
-    flex: 1,
-    backgroundColor: '#05445E',
+    flex:0,
+    backgroundColor: 'white',
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
-    paddingVertical: 30,
-    paddingHorizontal: 30
+    paddingVertical: 0,
+    paddingHorizontal: 100
   },
   title: {
     color: 'white',
@@ -225,11 +240,33 @@ const styles = StyleSheet.create({
     width: 375,
     height: 60,
     justifyContent: 'space-between',
-    padding: 10,
     alignItems: 'center',
     borderRadius: 20,
     flexDirection: 'row',
     marginVertical: 5,
+    alignSelf: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  advanceOpacity: {
+    backgroundColor: '#D9E3E5',
+    width: 375,
+    height: 60,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    borderRadius: 20,
+    flexDirection: 'row',
+    marginVertical: 5,
+    alignSelf: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  learningOpacity: {
+    backgroundColor: 'white',
+    width: 380,
+    height: 200  ,
+    alignItems: 'center',
+    flexDirection: 'row',
     alignSelf: 'center',
     alignItems: 'center',
     justifyContent: 'center',
