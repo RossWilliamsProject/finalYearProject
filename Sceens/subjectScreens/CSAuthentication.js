@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Dimensions, StyleSheet, Image, ScrollView } from 'react-native';
 import * as Animatable from 'react-native-animatable';
@@ -27,23 +26,23 @@ export default function CSAuthentication() {
               <Image source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/scientistHappy2.png')} />
             </View>
 
-              <View style={styles.learningOpacity} disabled={true}>
-                <Text style={styles.text}>
-                  Hey there! My name is Molly and I just started a job on board the HMS Trent,
+            <View style={styles.learningOpacity} disabled={true}>
+              <Text style={styles.text}>
+                Hey there! My name is Molly and I just started a job on board the HMS Trent,
                 a submarine! My job is to manage the ships cyber security,
                 and I’m going to need your help. Join me as I brush up on my security
                 knowledge along this adventure!
-                </Text>
-                <MaterialIcons name="navigate-next" color="black" size={20} />
-              </View>
-              <TouchableOpacity style={styles.advanceOpacity} onPress={() => setShowPreStory(false)}>
-                <Text style={styles.boldtext}>
-                  Start Learning!
-                </Text>
-                <MaterialIcons name="navigate-next" color="black" size={20} />
-              </TouchableOpacity>
+              </Text>
+              <MaterialIcons name="navigate-next" color="black" size={20} />
+            </View>
+            <TouchableOpacity style={styles.advanceOpacity} onPress={() => setShowPreStory(false)}>
+              <Text style={styles.boldtext}>
+                Start Learning!
+              </Text>
+              <MaterialIcons name="navigate-next" color="black" size={20} />
+            </TouchableOpacity>
           </Animatable.View>
-          
+
         </>
       ) : (
         <View style={styles.container}>
@@ -146,18 +145,30 @@ export default function CSAuthentication() {
               </View>
 
               <Animatable.View style={styles.footer} animation="fadeInUpBig">
-                <Text style={styles.title}>
-                  Post Story Narrative
+                <Text style={styles.text}>
+                  Chapter 1: Part 2
                 </Text>
-                <View style={styles.view}>
-                  <TouchableOpacity style={styles.scoreOpacity} onPress={() => navigation.navigate('SubjectSelectionCS')}>
-                    <Text style={styles.boldtext}>
-                      Return to Course
-                    </Text>
-                    <MaterialIcons name="navigate-next" color="black" size={20} />
-                  </TouchableOpacity>
+                <View style={styles.characterImage}>
+                  <Image source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/scientistHappy2.png')} />
                 </View>
+
+                <View style={styles.learningOpacity} disabled={true}>
+                  <Text style={styles.text}>
+                    Hey there! My name is Molly and I just started a job on board the HMS Trent,
+                    a submarine! My job is to manage the ships cyber security,
+                    and I’m going to need your help. Join me as I brush up on my security
+                    knowledge along this adventure!
+                  </Text>
+                  <MaterialIcons name="navigate-next" color="black" size={20} />
+                </View>
+                <TouchableOpacity style={styles.scoreOpacity} onPress={() => navigation.navigate('SubjectSelectionCS')}>
+                  <Text style={styles.boldtext}>
+                    Return to Course
+                  </Text>
+                  <MaterialIcons name="navigate-next" color="black" size={20} />
+                </TouchableOpacity>
               </Animatable.View>
+
             </>
           )}
         </View>
@@ -188,7 +199,7 @@ const styles = StyleSheet.create({
     fontSize: 30
   },
   footer: {
-    flex:0,
+    flex: 0,
     backgroundColor: 'white',
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
@@ -264,7 +275,7 @@ const styles = StyleSheet.create({
   learningOpacity: {
     backgroundColor: 'white',
     width: 380,
-    height: 200  ,
+    height: 200,
     alignItems: 'center',
     flexDirection: 'row',
     alignSelf: 'center',
