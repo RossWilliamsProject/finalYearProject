@@ -81,6 +81,11 @@ export default function CSFoundationsQuizScreen({ sessionScore, setSessionScore,
                         <Text style={Styles.textBold}>
                             Badges:
                         </Text>
+                        <View>
+                            <Image
+                                source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/award1.png')}
+                            />
+                        </View>
                     </TouchableOpacity>
 
                     <View style={Styles.space} />
@@ -91,12 +96,6 @@ export default function CSFoundationsQuizScreen({ sessionScore, setSessionScore,
                         <Text style={Styles.textBold}>
                             View Leaderboard
                         </Text>
-
-                        <View>
-                            <Image
-                                source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/awardTemp.png')}
-                            />
-                        </View>
 
                     </TouchableOpacity>
 

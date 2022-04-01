@@ -11,10 +11,10 @@ export default function ProfileScreen({ setShowBadge01, showBadge01, na  }) {
         style={Styles.userButton}
         disabled={true}>
         <Text style={Styles.text}>
-          Name Here
+          Max Miller
         </Text>
         <Text style={Styles.scoreText}>
-          Score:Here
+          Score: 0
         </Text>
       </TouchableOpacity>
 
