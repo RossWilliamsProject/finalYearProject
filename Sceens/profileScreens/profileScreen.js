@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
 export default function ProfileScreen({ setShowBadge01, showBadge01, na  }) {
+  const navigation = useNavigation();
   return (
     <View style={Styles.view}>
       <View style={Styles.space} />
@@ -31,7 +32,7 @@ export default function ProfileScreen({ setShowBadge01, showBadge01, na  }) {
         {showBadge01 ?
           <View>
             <Image
-              source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/awardTemp.png')}
+              source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/award1.png')}
             />
           </View>
           : <></>

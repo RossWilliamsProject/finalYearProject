@@ -84,7 +84,7 @@ export default function CSAuthenticatonQuizScreen({ sessionScore, setSessionScor
                         {showBadge01 ?
                             <View>
                                 <Image
-                                    source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/awardTemp.png')}
+                                    source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/award1.png')}
                                 />
                             </View>
                             : <></>
