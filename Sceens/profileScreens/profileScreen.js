@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 export default function ProfileScreen({ setShowBadge01, showBadge01, na  }) {
   const navigation = useNavigation();

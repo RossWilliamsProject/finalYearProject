@@ -1,8 +1,11 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, ImageBackground } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons'
+import { useNavigation } from '@react-navigation/native';
 
-export default function HomeScreen({ navigation }) {
+export default function HomeScreen() {
+    const navigation = useNavigation();
+
     return (
         
         <ImageBackground source={{ uri: 'https://pbs.twimg.com/media/FElwa2vWUAMHeg6?format=jpg&name=medium' }} style={Styles.view}>
