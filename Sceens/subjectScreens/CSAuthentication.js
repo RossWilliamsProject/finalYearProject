@@ -20,18 +20,17 @@ export default function CSAuthentication() {
 
           <Animatable.View style={styles.footer} animation="fadeInUpBig">
             <Text style={styles.text}>
-              Chapter 1: Part 1
+              Chapter 4: Part 1
             </Text>
             <View style={styles.characterImage}>
-              <Image source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/scientistHappy2.png')} />
+              <Image source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/captain.png')} />
             </View>
 
             <View style={styles.learningOpacity} disabled={true}>
               <Text style={styles.text}>
-                Hey there! My name is Molly and I just started a job on board the HMS Trent,
-                a submarine! My job is to manage the ships cyber security,
-                and I’m going to need your help. Join me as I brush up on my security
-                knowledge along this adventure!
+                Ahoy, it’s the captain! I’ve been hearing rumours of an internal cyber-attack coming!
+                You better secure the operating system and the kernel quick, just as soon as you fix that
+                message issue! Which one will you do first!
               </Text>
               <MaterialIcons name="navigate-next" color="black" size={20} />
             </View>
@@ -146,18 +145,16 @@ export default function CSAuthentication() {
 
               <Animatable.View style={styles.footer} animation="fadeInUpBig">
                 <Text style={styles.text}>
-                  Chapter 1: Part 2
+                  Chapter 4: Part 2
                 </Text>
                 <View style={styles.characterImage}>
-                  <Image source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/scientistHappy2.png')} />
+                  <Image source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/hacker.png')} />
                 </View>
 
                 <View style={styles.learningOpacity} disabled={true}>
                   <Text style={styles.text}>
-                    Hey there! My name is Molly and I just started a job on board the HMS Trent,
-                    a submarine! My job is to manage the ships cyber security,
-                    and I’m going to need your help. Join me as I brush up on my security
-                    knowledge along this adventure!
+                    Hahaha… Once I have access to this submarines network, no one will be able to stop me!
+                    Wait… What’s this? Authentication?! Disaster! I’ll just have to try something new
                   </Text>
                   <MaterialIcons name="navigate-next" color="black" size={20} />
                 </View>

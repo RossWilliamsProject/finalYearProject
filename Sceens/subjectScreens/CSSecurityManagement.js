@@ -20,18 +20,17 @@ export default function CSSecurityManagement() {
 
           <Animatable.View style={styles.footer} animation="fadeInUpBig">
             <Text style={styles.text}>
-              Chapter 1: Part 1
+              Chapter 2: Part 1
             </Text>
             <View style={styles.characterImage}>
-              <Image source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/scientistHappy2.png')} />
+              <Image source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/scientistSad.png')} />
             </View>
 
             <View style={styles.learningOpacity} disabled={true}>
               <Text style={styles.text}>
-                Hey there! My name is Molly and I just started a job on board the HMS Trent,
-                a submarine! My job is to manage the ships cyber security,
-                and I’m going to need your help. Join me as I brush up on my security
-                knowledge along this adventure!
+                What a disaster! One day on the job and it’s already so serious!
+                I’m so worried… Stress or not, I have to do my job! First of all,
+                let’s try and figure out how to make a plan and figure out how to manage security
               </Text>
               <MaterialIcons name="navigate-next" color="black" size={20} />
             </View>
@@ -128,7 +127,7 @@ export default function CSSecurityManagement() {
 
               <Animatable.View style={styles.footer} animation="fadeInUpBig">
                 <Text style={styles.text}>
-                  Chapter 1: Part 2
+                  Chapter 2: Part 2
                 </Text>
                 <View style={styles.characterImage}>
                   <Image source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/scientistHappy2.png')} />
@@ -136,10 +135,10 @@ export default function CSSecurityManagement() {
 
                 <View style={styles.learningOpacity} disabled={true}>
                   <Text style={styles.text}>
-                    Hey there! My name is Molly and I just started a job on board the HMS Trent,
-                    a submarine! My job is to manage the ships cyber security,
-                    and I’m going to need your help. Join me as I brush up on my security
-                    knowledge along this adventure!
+                    Whew! I’m glad that’s done, nice work! Now that
+                    I’ve got a better overall idea, it’s time to start breaking things down.
+                    I think if I was trying to hack a submarine, the first thing I’d do is read
+                    the communications, so let’s focus on that next!
                   </Text>
                   <MaterialIcons name="navigate-next" color="black" size={20} />
                 </View>

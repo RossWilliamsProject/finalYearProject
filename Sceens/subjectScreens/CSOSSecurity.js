@@ -20,7 +20,7 @@ export default function CSOSSecurity() {
 
           <Animatable.View style={styles.footer} animation="fadeInUpBig">
             <Text style={styles.text}>
-              Chapter 1: Part 1
+              Chapter 6: Part 1
             </Text>
             <View style={styles.characterImage}>
               <Image source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/scientistHappy2.png')} />
@@ -28,10 +28,9 @@ export default function CSOSSecurity() {
 
             <View style={styles.learningOpacity} disabled={true}>
               <Text style={styles.text}>
-                Hey there! My name is Molly and I just started a job on board the HMS Trent,
-                a submarine! My job is to manage the ships cyber security,
-                and I’m going to need your help. Join me as I brush up on my security
-                knowledge along this adventure!
+                All of the computers on the submarine have an operating system,
+                so we better make sure that there isn’t any flaws!
+                Oh no… We have both Linux and Windows systems! This could get complicated…
               </Text>
               <MaterialIcons name="navigate-next" color="black" size={20} />
             </View>
@@ -147,18 +146,17 @@ export default function CSOSSecurity() {
 
               <Animatable.View style={styles.footer} animation="fadeInUpBig">
                 <Text style={styles.text}>
-                  Chapter 1: Part 2
+                  Chapter 6: Part 2
                 </Text>
                 <View style={styles.characterImage}>
-                  <Image source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/scientistHappy2.png')} />
+                  <Image source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/captain.png')} />
                 </View>
 
                 <View style={styles.learningOpacity} disabled={true}>
                   <Text style={styles.text}>
-                    Hey there! My name is Molly and I just started a job on board the HMS Trent,
-                    a submarine! My job is to manage the ships cyber security,
-                    and I’m going to need your help. Join me as I brush up on my security
-                    knowledge along this adventure!
+                    Nice work workers! Now that the kernel is secure, we can finally travel without fear of sinking… wait,
+                    what’s a kernel? Our system could still be vulnerable?
+                    That’s not good news… Thank the heavens we have some experts on board!
                   </Text>
                   <MaterialIcons name="navigate-next" color="black" size={20} />
                 </View>

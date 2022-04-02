@@ -21,7 +21,7 @@ export default function CSCryptography() {
 
           <Animatable.View style={styles.footer} animation="fadeInUpBig">
             <Text style={styles.text}>
-              Chapter 1: Part 1
+              Chapter 3: Part 1
             </Text>
             <View style={styles.characterImage}>
               <Image source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/scientistHappy2.png')} />
@@ -29,10 +29,10 @@ export default function CSCryptography() {
 
             <View style={styles.learningOpacity} disabled={true}>
               <Text style={styles.text}>
-                Hey there! My name is Molly and I just started a job on board the HMS Trent,
-                a submarine! My job is to manage the ships cyber security,
-                and I’m going to need your help. Join me as I brush up on my security
-                knowledge along this adventure!
+                I remember when I was younger, I used to send messages to my
+                friends using secret codes… I’m pretty sure they do the same things
+                with communications now! Help me research encryption to make sure
+                our captains messages are safe!
               </Text>
               <MaterialIcons name="navigate-next" color="black" size={20} />
             </View>
@@ -146,18 +146,19 @@ export default function CSCryptography() {
 
               <Animatable.View style={styles.footer} animation="fadeInUpBig">
                 <Text style={styles.text}>
-                  Chapter 1: Part 2
+                  Chapter 3: Part 2
                 </Text>
                 <View style={styles.characterImage}>
-                  <Image source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/scientistHappy2.png')} />
+                  <Image source={require('C:/Users/epicr/OneDrive/Documents/GitHub/finalYearProject/assets/captain.png')} />
                 </View>
 
                 <View style={styles.learningOpacity} disabled={true}>
                   <Text style={styles.text}>
-                    Hey there! My name is Molly and I just started a job on board the HMS Trent,
-                    a submarine! My job is to manage the ships cyber security,
-                    and I’m going to need your help. Join me as I brush up on my security
-                    knowledge along this adventure!
+                    Ahoy, Captain here. Very glad to see you making progress. I’m happy that my
+                    messages are safe from any unwelcome
+                    eyes! Not to burst your bubble, but I seem to have received a communication
+                    from a colleague, but I’m really not sure it’s actually him… Is there any way
+                    you could make sure it is?
                   </Text>
                   <MaterialIcons name="navigate-next" color="black" size={20} />
                 </View>
