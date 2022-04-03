@@ -273,7 +273,7 @@ const styles = StyleSheet.create({
   },
   learningOpacity: {
     backgroundColor: 'white',
-    width: 380,
+    width: 355,
     height: 200,
     alignItems: 'center',
     flexDirection: 'row',
