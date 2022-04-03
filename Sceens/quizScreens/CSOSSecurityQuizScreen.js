@@ -112,7 +112,7 @@ export default function CSOSSecurityQuizScreen({ sessionScore, setSessionScore, 
                     </TouchableOpacity>
                 </View>
             ) : (
-                <View>
+                <View style={Styles.TextView}>
                     <View>
                         <Text style={Styles.text}>Question {currentQuestion + 1} of {QuestionsList.length}</Text>
                     </View>
@@ -165,6 +165,9 @@ const Styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: "#D9E3E5"
     },
+    TextView: {
+        width: 355
+    },
     textBold: {
         color: 'black',
         fontWeight: 'bold',
@@ -179,7 +182,7 @@ const Styles = StyleSheet.create({
     },
     button: {
         backgroundColor: 'white',
-        width: 375,
+        width: 355,
         height: 60,
         justifyContent: 'space-between',
         padding: 10,

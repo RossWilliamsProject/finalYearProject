@@ -46,7 +46,7 @@ export const LeaderboardList = [
     },
     {
       "displayName": "Anne Kerr",
-      "score": 400,
+      "score": 1100,
       "user": false
     }
   ]

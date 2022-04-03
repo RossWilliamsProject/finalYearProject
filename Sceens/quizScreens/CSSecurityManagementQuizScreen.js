@@ -112,7 +112,7 @@ export default function CSSecurityManagementQuizScreen({ sessionScore, setSessio
                     </TouchableOpacity>
                 </View>
             ) : (
-                <View>
+                <View style={Styles.TextView}>
                     <View>
                         <Text style={Styles.text}>Question {currentQuestion + 1} of {QuestionsList.length}</Text>
                     </View>
@@ -158,12 +158,14 @@ export default function CSSecurityManagementQuizScreen({ sessionScore, setSessio
 }
 
 
-
 const Styles = StyleSheet.create({
     view: {
         flex: 1,
         alignItems: 'center',
         backgroundColor: "#D9E3E5"
+    },
+    TextView: {
+        width: 355
     },
     textBold: {
         color: 'black',
@@ -179,7 +181,7 @@ const Styles = StyleSheet.create({
     },
     button: {
         backgroundColor: 'white',
-        width: 375,
+        width: 355,
         height: 60,
         justifyContent: 'space-between',
         padding: 10,
