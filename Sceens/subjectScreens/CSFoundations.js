@@ -145,7 +145,7 @@ export default function CSFoundations() {
 
                 <View style={styles.learningOpacity} disabled={true}>
                   <Text style={styles.text}>
-                    Ahoy! I am the captain of this submarine. Glad to have you on-board. Very glad to
+                    Ahoy! I am the captain of this submarine. Very glad to
                     have you on-board… I hear you’re good at computer security? Thank god… I’ve just
                     had emergency reports of a potential hacker attempting to access the system!
                   </Text>
