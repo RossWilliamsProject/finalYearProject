@@ -1,7 +1,8 @@
-
+//Imports
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, contentContainer } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 
+//Learning materials for "Authentication" computer security subject
 export default function CSAuthentication() {
   return (
     <View style={styles.backgroundview}>
@@ -96,7 +97,6 @@ export default function CSAuthentication() {
 const styles = StyleSheet.create({
   view: {
     flex: 0,
-    //alignItems:'center',
     width: "93%",
     borderRadius: 20,
     backgroundColor: "white"

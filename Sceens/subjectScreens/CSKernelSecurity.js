@@ -1,7 +1,8 @@
-
+//Imports
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, contentContainer } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 
+//Learning materials for "KernelSecurity" computer security subject
 export default function CSKernelSecurity() {
   return (
     <View style={styles.backgroundview}>

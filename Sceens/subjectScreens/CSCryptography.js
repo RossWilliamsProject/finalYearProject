@@ -1,7 +1,8 @@
-
+//Imports
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, contentContainer } from 'react-native';
 
+//Learning materials for "Cryptography" computer security subject
 export default function CSCryptography() {
   return (
     <View style={styles.backgroundview}>
@@ -95,7 +96,6 @@ export default function CSCryptography() {
 const styles = StyleSheet.create({
   view: {
     flex: 0,
-    //alignItems:'center',
     width: "93%",
     borderRadius: 20,
     backgroundColor: "white"
