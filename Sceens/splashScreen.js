@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Dimensions, StyleSheet, StatusBar,Image} from 'react-native';
+import { View, Text, TouchableOpacity, Dimensions, StyleSheet,Image} from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 

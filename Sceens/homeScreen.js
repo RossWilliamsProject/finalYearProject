@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Container, ImageBackground} from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, ImageBackground} from 'react-native';
 import {MaterialCommunityIcons} from '@expo/vector-icons'
 
 export default function HomeScreen ({ navigation }) {
