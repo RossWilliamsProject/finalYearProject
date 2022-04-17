@@ -9,7 +9,7 @@ export default function CSAuthenticatonQuizScreen({ sessionScore, setSessionScor
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [score, setScore] = useState(0);
-    const [selected, setSelected] = useState(false);
+    const [clicked, setClicked] = useState(false);
     const [showScore, setShowScore] = useState(false);
     const [correct, setCorrect] = useState(false);
 
