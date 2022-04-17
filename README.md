@@ -10,7 +10,7 @@ Prototype C: Intrinsic Gamification Features (Narrration)
 Link To Repo: https://github.com/RossWilliamsProject/finalYearProject
 The three prototypes are stored on seperate branches of the repository named 
 "PrototypeA", "PrototypeB", and "PrototypeC"
-(TPLEASE NOTE: The "Main" branch contains nothing of interest)
+(PLEASE NOTE: The "Main" branch contains nothing of interest)
 
 To Run the code:
     - After downloading code and opening terminal to code location.
