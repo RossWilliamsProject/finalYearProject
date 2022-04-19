@@ -1,7 +1,8 @@
-
-import React, { useState } from "react";
+//imports
+import React from "react";
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 
+//subject selection ordered into chapters, some chapters are adjacent to eachother.
 export default function subjectSelectionScreenCS({ navigation }) {
     return (
         <View style={styles.view}>
