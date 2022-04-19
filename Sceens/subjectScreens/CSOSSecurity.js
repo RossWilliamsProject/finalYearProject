@@ -119,9 +119,6 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     fontSize: 20
   },
-  checkbox: {
-    alignSelf: "center",
-  },
   space: {
     width: 20,
     height: 10,

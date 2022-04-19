@@ -79,7 +79,6 @@ export default function CSSecurityManagement() {
 const styles = StyleSheet.create({
   view: {
     flex: 0,
-    //alignItems:'center',
     width: "93%",
     borderRadius: 20,
     backgroundColor: "white"
@@ -99,9 +98,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     paddingLeft: 10,
     fontSize: 20
-  },
-  checkbox: {
-    alignSelf: "center",
   },
   space: {
     width: 20,
