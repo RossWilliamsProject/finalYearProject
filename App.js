@@ -1,3 +1,4 @@
+//imports
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -24,6 +25,7 @@ import CSSecurityManagement from './Sceens/subjectScreens/CSSecurityManagement';
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
+// function to create tab navigation system to be added to stack navigation system
 function MyTabs() {
   return (
 
@@ -86,6 +88,7 @@ function MyTabs() {
   );
 }
 
+//creates a stack navigation system and places the tabs inside. 
 export default function App() {
   return (
     <NavigationContainer>
