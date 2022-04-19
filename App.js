@@ -1,3 +1,4 @@
+//imports
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -24,6 +25,7 @@ import CSSecurityManagement from './Sceens/subjectScreens/CSSecurityManagement';
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
+//creation of tab navigation that is placed in stack navigation later
 function MyTabs() {
   return (
 
@@ -86,6 +88,8 @@ function MyTabs() {
   );
 }
 
+//creation of stack navigation (which is the main nav system)
+// tab navigator placed inside, and is automatically displayed first (after splash screen)
 export default function App() {
   return (
     <NavigationContainer>
