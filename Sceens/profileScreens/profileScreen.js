@@ -1,8 +1,12 @@
+//imports
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-export default function ProfileScreen({ setShowBadge01, showBadge01, na  }) {
+// used to display the profile of the user 
+// accessible from either home screen or tab navigation 
+// conditionally renders badge based on state passed "up" under name "showbadge01"
+export default function ProfileScreen({ setShowBadge01, showBadge01 }) {
   const navigation = useNavigation();
   return (
     <View style={Styles.view}>
@@ -89,9 +93,6 @@ const Styles = StyleSheet.create({
     color: 'black',
     fontWeight: 'bold',
     fontSize: 20
-  },
-  checkbox: {
-    alignSelf: "center",
   },
   space: {
     width: 20,

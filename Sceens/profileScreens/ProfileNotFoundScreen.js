@@ -1,12 +1,15 @@
+//imports
+import React from 'react';
+import { View, Text } from 'react-native';
 
-import React from 'react';
-import { View, Text} from 'react-native';
-
-export default function ProfileNotFoundScreen () {
-    return(
+// template blank screen used if the user selects a profile that 
+// is not yet implemented 
+export default function ProfileNotFoundScreen() {
+  return (
     <View style={{
-        backgroundColor: "#D9E3E5"}}>
+      backgroundColor: "#D9E3E5"
+    }}>
       <Text>Profile Not Found</Text>
     </View>
-    )
-  }
+  )
+}

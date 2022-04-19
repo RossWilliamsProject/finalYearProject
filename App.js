@@ -1,12 +1,12 @@
+// imports
 import React, { useState } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { View, Text, TouchableOpacity, StyleSheet, ImageBackground } from 'react-native';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import {TouchableOpacity, StyleSheet} from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import SplashScreen from './Sceens/splashScreen';
 import HomeScreen from './Sceens/homeScreen';
-import SettingsScreen from './Sceens/settingsScreen';
 import ProfileScreen from './Sceens/profileScreens/profileScreen';
 import ProfileNotFoundScreen from './Sceens/profileScreens/ProfileNotFoundScreen';
 import LeaderboardScreen from './Sceens/leaderboardScreen';
@@ -14,7 +14,6 @@ import LeaderboardScreen from './Sceens/leaderboardScreen';
 import SubjectSelectionScreenCS from './Sceens/subjectSelectionScreens/subjectSelectionScreenCS';
 import SubjectSelectionOther from './Sceens/subjectSelectionScreens/subjectSelectionOther';
 import CourseSelectionScreen from './Sceens/courseSelectionScreen';
-
 import OSubjectNotFound from './Sceens/subjectScreens/OSubjectNotFound';
 import CSAuthentication from './Sceens/subjectScreens/CSAuthentication';
 import CSCryptography from './Sceens/subjectScreens/CSCryptography';
@@ -33,8 +32,6 @@ import CSKernelSecurityQuizScreen from './Sceens/quizScreens/CSKernelSecurityQui
 import CSMalwareQuizScreen from './Sceens/quizScreens/CSMalwareQuizScreen';
 import CSOSSecurityQuizScreen from './Sceens/quizScreens/CSOSSecurityQuizScreen';
 import CSSecurityManagementQuizScreen from './Sceens/quizScreens/CSSecurityManagementQuizScreen';
-
-import { LeaderboardList } from './AppData/AppDataLists/LeaderboardList';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -120,6 +117,7 @@ function MyTabs({ sessionScore }) {
   );
 }
 
+//create navigation structures, and pass needed state to each of the screens
 export default function App() {
   const [sessionScore, setSessionScore] = useState(0);
   const [showBadge01, setShowBadge01] = useState(false);

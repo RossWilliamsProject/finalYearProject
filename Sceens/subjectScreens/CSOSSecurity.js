@@ -1,9 +1,10 @@
-
+//imports
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, contentContainer, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native';
 
+// learning materials for "OS Security "
 export default function CSOSSecurity() {
   const Navigation = useNavigation();
 
@@ -112,7 +113,6 @@ export default function CSOSSecurity() {
 const styles = StyleSheet.create({
   view: {
     flex: 0,
-    //alignItems:'center',
     width: "93%",
     borderRadius: 20,
     backgroundColor: "white"
@@ -143,9 +143,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     paddingLeft: 10,
     fontSize: 20
-  },
-  checkbox: {
-    alignSelf: "center",
   },
   space: {
     width: 20,

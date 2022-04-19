@@ -1,13 +1,15 @@
+//imports 
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, ImageBackground } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native';
 
+// simple screen used to display navigation buttons as a usable alternative to tabs
 export default function HomeScreen() {
     const navigation = useNavigation();
 
     return (
-        
+        // uses uploaded internet image due to bug with ImageBackground and local storage assets
         <ImageBackground source={{ uri: 'https://pbs.twimg.com/media/FElwa2vWUAMHeg6?format=jpg&name=medium' }} style={Styles.view}>
             <TouchableOpacity
                 style={Styles.button}

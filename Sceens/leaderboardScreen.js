@@ -1,10 +1,14 @@
+//imports
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { LeaderboardList } from "../AppData/AppDataLists/LeaderboardList";
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from "uuid";  // uuidv4 is a value randomiser 
 import { useNavigation } from '@react-navigation/native';
 
-export default function LeaderboardScreen({sessionScore}) {
+//reads the leaderboard appdata file and displays scores on screen in order
+//session sore is used to traack the users current score in this session 
+//it is key to note that in this edition of the code, score changes are NOT permanent
+export default function LeaderboardScreen({ sessionScore }) {
   const navigation = useNavigation();
 
   return (
@@ -13,17 +17,24 @@ export default function LeaderboardScreen({sessionScore}) {
         <Text style={Styles.textBold}>LeaderBoard</Text>
         <Text style={Styles.text}>Your Score is Highlighted in Blue</Text>
         <View>
-          {LeaderboardList.sort(OrderValues).map((entry) => (
+          {LeaderboardList.sort(SortValues).map((entry) => (
             <TouchableOpacity
+              // select one style if the score belongs to the "user" or not
               style={entry.user ? Styles.userButton : Styles.button}
-              onPress={entry.user ? () => {navigation.navigate("profileScreen"), console.log(sessionScore)} : () => navigation.navigate("ProfileNotFoundScreen")}
+              //apply onpress that is linked to the profile of the score shown
+              //output score to console on display for debugging
+              onPress={entry.user ? () => { navigation.navigate("profileScreen"), console.log(sessionScore) } : () => navigation.navigate("ProfileNotFoundScreen")}
+              //assign random ID values to items to ensure unique keys
               key={uuidv4()}>
+
               <Text style={Styles.text}>
                 {entry.displayName}
               </Text>
+
               <Text style={Styles.scoreText}>
                 Score: {entry.user ? sessionScore : entry.score}
               </Text>
+
             </TouchableOpacity>
           ))}
         </View>
@@ -32,12 +43,13 @@ export default function LeaderboardScreen({sessionScore}) {
   )
 }
 
-
-function OrderValues(a, b) {
-  if (a.score > b.score) {
+// function is used to sort values passed to it
+// works in conjunction with "sort" function used in "map" above
+function SortValues(firstValue, secondValue) {
+  if (firstValue.score > secondValue.score) {
     return -1;
   }
-  if (a.score < b.score) {
+  if (firstValue.score < secondValue.score) {
     return 1;
   }
   return 0;
