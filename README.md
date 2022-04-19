@@ -12,7 +12,11 @@ THIS IS PROTOTYPE B
 Link To Repo: https://github.com/RossWilliamsProject/finalYearProject
 The three prototypes are stored on seperate branches of the repository named 
 "PrototypeA", "PrototypeB", and "PrototypeC"
-(TPLEASE NOTE: The "Main" branch contains nothing of interest)
+(PLEASE NOTE: The "Main" branch contains nothing of interest)
+
+Program was developed using an agile methodology with the use of a kanban style board with short sprints. 
+Sprint details can be found on the trello board: https://trello.com/b/ZOu7ojxX/psyrw5-project
+
 
 To Run the code:
     - After downloading code and opening terminal to code location.
